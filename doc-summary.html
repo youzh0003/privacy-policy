@@ -1,0 +1,211 @@
+<h1>Privacy Policy — Summarize PDFs and Photos</h1>
+<p>Last updated: August 17, 2026</p>
+
+<h2>Which app and developer this policy covers</h2>
+<p>This privacy policy applies to the following Android application and its
+developer, as listed on Google Play:</p>
+<ul>
+  <li><strong>App name:</strong> Summarize PDFs and Photos</li>
+  <li><strong>Package name / application ID:</strong> com.yzy.docsummary</li>
+  <li><strong>Google Play listing:</strong>
+      <a href="https://play.google.com/store/apps/details?id=com.yzy.docsummary">play.google.com/store/apps/details?id=com.yzy.docsummary</a></li>
+  <li><strong>Developer name (Google Play developer account):</strong> yzyy, an
+      individual developer based in Singapore</li>
+  <li><strong>Contact email:</strong>
+      <a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a></li>
+</ul>
+
+<p>Summarize PDFs and Photos ("the app") reads a document you choose and returns
+a short summary, a list of key points and a few extracted fields, each pointing
+back to the page it came from. This page explains what data the app handles and
+who it is shared with. The app is provided by yzyy, an individual developer
+based in Singapore ("we", "us").</p>
+
+<h2>Summary</h2>
+<ul>
+  <li><strong>This app sends the text of the document you choose to an AI
+      service so that it can be summarised.</strong> That is what the app does,
+      and it cannot work without doing it. Please read "Your documents" below
+      before you use it on something sensitive.</li>
+  <li>The file itself never leaves your phone. The app extracts the text on your
+      device and sends only that text — never the file, never its name, never
+      where it is stored.</li>
+  <li>We do not keep the text. It is held in memory only for as long as the
+      request takes, and it is not written to any database or log of ours.</li>
+  <li>No account is needed and the app never asks you for personal details. It
+      signs in anonymously in the background so that we can count your free
+      monthly credits.</li>
+  <li>There are no ads, and the app does not collect an advertising ID.</li>
+  <li>The app sends crash reports and basic usage counts so it can be fixed and
+      improved. These are tied to a random installation identifier, so they are
+      <em>not</em> anonymous, and they never include your documents, their names
+      or their contents. This version of the app has no switch to turn them off;
+      uninstalling stops all collection.</li>
+</ul>
+
+<h2>Your documents</h2>
+<p>When you choose a document, the app opens it on your device and extracts the
+text, page by page. It then sends that text to our server, which passes it to an
+AI service that produces the summary. The result comes back to your phone and is
+shown to you.</p>
+<p>What is sent is <strong>only the page text and the number of pages</strong>.
+The request the app makes has no field for a file name, no field for a file
+location, and no field for the file's bytes, so there is nothing else about the
+document for it to send — by the shape of the request, not by us remembering to
+leave it out.</p>
+<p>What we do with it:</p>
+<ul>
+  <li><strong>We do not store it.</strong> Our server holds the text in memory
+      for the length of the request and then discards it. It is never written to
+      a database, a file, or a backup.</li>
+  <li><strong>We do not log it.</strong> Our server's logs record categories,
+      counts and timings — never document text, never excerpts, never the values
+      the AI extracted.</li>
+  <li><strong>We do not read it.</strong> No person at our end sees your
+      document. Nothing in our systems is designed to let us retrieve it, because
+      nothing keeps it.</li>
+  <li><strong>We do not use it to train anything.</strong> Neither we nor our AI
+      provider train models on it (see below).</li>
+</ul>
+<p>The file you choose is never modified, moved or copied out of its place. The
+app has no storage permission and cannot browse your files: it only ever sees
+the one document you pick in the system file picker, or that you send to it from
+another app.</p>
+
+<h2>The AI service we use</h2>
+<p>The summarising is done by <strong>OpenAI</strong>, acting as our service
+provider. The page text is sent to OpenAI's API from our server, together with
+the instructions that tell it what kind of summary to produce.</p>
+<ul>
+  <li>Every request we make sets OpenAI's <code>store</code> option to
+      <em>false</em>, which instructs OpenAI not to retain the request or its
+      response for later retrieval.</li>
+  <li>API call logging is switched off on our OpenAI organisation account, so
+      prompts and responses are not kept in our account's logs.</li>
+  <li>OpenAI does not use data submitted through its API to train its models.</li>
+  <li>OpenAI may hold a copy briefly for its own security and abuse monitoring
+      before deleting it. That is OpenAI's process, not ours, and we cannot
+      switch it off on your behalf.</li>
+</ul>
+<p>See <a href="https://openai.com/policies/privacy-policy">OpenAI's Privacy
+Policy</a> and its API data-usage policies for how OpenAI handles data it
+receives.</p>
+
+<h2>Please think before you send</h2>
+<p>The app is useful precisely on documents that matter — a tenancy agreement, a
+bill, a letter from an insurer. Because the text of whatever you choose is sent
+off your device to be read by an AI service, you should treat this app the way
+you would treat pasting the same text into any online service, and avoid using
+it on material you are not permitted to disclose to a third party, such as
+someone else's confidential or medical records.</p>
+
+<h2>Your anonymous account</h2>
+<p>The app signs in anonymously through Firebase Authentication the first time it
+runs. This creates a random identifier for your installation. It is not linked to
+your name, email address, phone number or Google account, and we never ask you
+for any of those.</p>
+<p>Against that identifier we keep a small record on our server containing
+<strong>only counters and timestamps</strong>: how many credits you have used
+this month, how many free credits remain, when the allowance resets, and
+counters used to stop automated abuse. It contains no document text, no file
+names, and nothing that identifies you.</p>
+<p>If you uninstall the app or clear its data, your device forgets that identity
+and the app creates a new one the next time it runs. The old record is left
+holding nothing but counters.</p>
+
+<h2>Crash reports and usage counts</h2>
+<p>The app sends:</p>
+<ul>
+  <li><strong>Crash reports</strong> — the technical details of a failure, such
+      as the stack trace and the state of the device at the time.</li>
+  <li><strong>Usage counts</strong> — a fixed, closed set of events: that the app
+      was opened and how, that an analysis started, finished or failed, how many
+      pages the document had, how many credits were used, how long it took, and,
+      if something failed, which of the app's own error categories applied. The
+      app provides no way for a file name, a document's text or an extracted
+      value to be recorded in these — every value is a number, a yes/no, or a
+      label from a fixed list.</li>
+</ul>
+<p>This information is tied to a random installation identifier generated by
+Google's software. We do not ask for or store anything that identifies you
+personally, but because that identifier is consistent for your installation,
+this reporting is pseudonymous rather than anonymous. We describe it plainly
+rather than calling it anonymous.</p>
+<p><strong>This version of the app does not offer a switch to turn this
+off.</strong> Uninstalling the app stops all collection.</p>
+
+<h2>Network use</h2>
+<p>The app needs network access to work at all: to sign in anonymously, to send
+the document text for summarising and receive the result, and to send the crash
+reports and usage counts described above. Unlike a purely on-device tool, it
+cannot function offline.</p>
+
+<h2>Abuse prevention</h2>
+<p>To stop the free allowance being drained by automated traffic, the app uses
+<strong>Firebase App Check with the Google Play Integrity API</strong>. This asks
+Google to confirm that the request is coming from a genuine, unmodified copy of
+this app on a genuine Android device. It reports on the app and the device's
+integrity, not on you, and it does not give us your identity.</p>
+
+<h2>Payments</h2>
+<p>This version of the app is free and sells nothing. It gives a number of free
+credits each month. If a paid plan is added later, it will be sold through Google
+Play, Google will process the payment, we will never receive or store your
+payment details, and this page will be updated before that change takes
+effect.</p>
+
+<h2>Advertising</h2>
+<p>The app contains no advertising and no advertising SDK, and does not collect
+an advertising ID.</p>
+
+<h2>Third-party services</h2>
+<p>The app and its server use the following services, which handle data under
+their own privacy policies:</p>
+<ul>
+  <li><strong>OpenAI</strong> — summarising the page text, as described
+      above.</li>
+  <li><strong>Firebase Authentication</strong> — the anonymous sign-in described
+      above.</li>
+  <li><strong>Cloud Firestore</strong> — the credit counters described above.</li>
+  <li><strong>Firebase App Check / Google Play Integrity</strong> — abuse
+      prevention.</li>
+  <li><strong>Firebase Crashlytics</strong> — crash reports (stack traces, device
+      state at the time of a crash).</li>
+  <li><strong>Google Analytics for Firebase</strong> — the usage counts described
+      above, plus standard device information such as device model and operating
+      system version. Like any internet service, it also sees the IP address your
+      device connects from, and Google derives an approximate location (typically
+      city or region level) from it. The app itself has no location permission
+      and cannot read your actual location.</li>
+</ul>
+<p>All of the Firebase and Google services above are operated by Google. See
+<a href="https://policies.google.com/privacy">Google's Privacy Policy</a> for how
+Google handles this data.</p>
+
+<h2>Data retention and deletion</h2>
+<p>Your document text is not retained by us at all, so there is nothing of it to
+delete. Our servers pass it on, return the answer, and keep no copy.</p>
+<p>The credit record described under "Your anonymous account" is kept for as long
+as the app is in use, because it is what stops the monthly allowance from being
+reset by reinstalling. It holds counters only.</p>
+<p>Data collected by the Google services above is retained under Google's
+retention policies: usage data for a limited period, and crash reports only as
+long as they are useful for fixing problems. Uninstalling the app stops all
+collection.</p>
+<p>If you want the record associated with your installation deleted, write to
+<a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a> and we will delete
+it. Because the record is deliberately not linked to any personal detail, we may
+need you to help us identify which one is yours.</p>
+
+<h2>Children</h2>
+<p>The app is intended for people aged 13 and over, and says so when it first
+runs. It is not directed at children under 13, and we do not knowingly collect
+personal information from children. Summaries are produced by an AI model, which
+can be wrong; the app says so on the result itself.</p>
+
+<h2>Changes</h2>
+<p>If our data practices change, we will update this page and the "Last updated"
+date above before the change takes effect.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a></p>
