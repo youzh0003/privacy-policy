@@ -1,5 +1,5 @@
 <h1>Privacy Policy — Summarize PDFs and Photos</h1>
-<p>Last updated: August 17, 2026</p>
+<p>Last updated: August 19, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -23,15 +23,23 @@ based in Singapore ("we", "us").</p>
 
 <h2>Summary</h2>
 <ul>
-  <li><strong>This app sends the text of the document you choose to an AI
-      service so that it can be summarised.</strong> That is what the app does,
-      and it cannot work without doing it. Please read "Your documents" below
-      before you use it on something sensitive.</li>
-  <li>The file itself never leaves your phone. The app extracts the text on your
-      device and sends only that text — never the file, never its name, never
-      where it is stored.</li>
-  <li>We do not keep the text. It is held in memory only for as long as the
-      request takes, and it is not written to any database or log of ours.</li>
+  <li><strong>This app sends the document you choose to an AI service so that
+      it can be summarised.</strong> A PDF page with selectable text is sent as
+      text. A page without one — a scan — is sent as a picture of that page, and
+      a photo you share is sent as a picture too, because a picture is the only
+      way the model can read them. That is what the app does, and it cannot work
+      without doing it. Please read "Your documents" below before you use it on
+      something sensitive.</li>
+  <li>The original file is never uploaded as a file, and its name and where it is
+      stored are never sent. What leaves your phone is what the app prepared on
+      it: the text of a page that has a text layer, or a picture of a page that
+      does not.</li>
+  <li>We do not keep your pages. They are held only while the request is being
+      answered, and never written to a database, a file or a log of ours. The
+      <em>answer</em> is different: it is kept for about 15 minutes — including
+      the lines it quotes from your document — so that asking again collects the
+      result you already paid for instead of buying a second one. It is deleted
+      after that.</li>
   <li>No account is needed and the app never asks you for personal details. It
       signs in anonymously in the background so that we can count your free
       monthly credits.</li>
@@ -44,26 +52,40 @@ based in Singapore ("we", "us").</p>
 </ul>
 
 <h2>Your documents</h2>
-<p>When you choose a document, the app opens it on your device and extracts the
-text, page by page. It then sends that text to our server, which passes it to an
-AI service that produces the summary. The result comes back to your phone and is
-shown to you.</p>
-<p>What is sent is <strong>only the page text and the number of pages</strong>.
-The request the app makes has no field for a file name, no field for a file
-location, and no field for the file's bytes, so there is nothing else about the
-document for it to send — by the shape of the request, not by us remembering to
-leave it out.</p>
+<p>When you choose a document, the app opens it on your device and prepares it
+page by page. A page with selectable text is extracted as text. A page without
+one — a scan — is rendered on your phone into a picture of that page, and a
+photo you share is re-encoded into a picture the same way, because a picture is
+the only way the AI model can read them. The app then sends what it prepared to
+our server, which passes it to an AI service that produces the summary. The
+result comes back to your phone and is shown to you.</p>
+<p>What is sent is <strong>the text of each page that has a text layer, a
+picture of each page that does not, and the number of pages</strong>. Any
+picture is one the app drew itself, from the page, at a fixed size. The request
+the app makes has no field for a file name, no field for a file location, and no
+field for the original file's bytes, so there is nothing else about the document
+for it to send — by the shape of the request, not by us remembering to leave it
+out.</p>
 <p>What we do with it:</p>
 <ul>
-  <li><strong>We do not store it.</strong> Our server holds the text in memory
-      for the length of the request and then discards it. It is never written to
-      a database, a file, or a backup.</li>
+  <li><strong>We do not store your pages.</strong> Our server holds the text and
+      any pictures in memory for the length of the request and then discards
+      them. They are never written to a database, a file, or a backup.</li>
+  <li><strong>We do keep the answer for about 15 minutes, and it quotes your
+      document.</strong> So that tapping Analyse again collects the result you
+      have already paid for instead of buying a second one, the summary is
+      stored for that long — and because every key point cites the line it came
+      from, that copy contains short verbatim excerpts of your pages. It is
+      deleted automatically when the time is up; a job sweeps expired results
+      every five minutes.</li>
   <li><strong>We do not log it.</strong> Our server's logs record categories,
-      counts and timings — never document text, never excerpts, never the values
-      the AI extracted.</li>
+      counts and timings — never document text, never a picture of a page, never
+      excerpts, never the values the AI extracted.</li>
   <li><strong>We do not read it.</strong> No person at our end sees your
-      document. Nothing in our systems is designed to let us retrieve it, because
-      nothing keeps it.</li>
+      document or your summary. Nothing in our systems is built to show either to
+      us: nothing keeps your pages, and the short-lived copy of the answer is
+      filed under your own anonymous installation identifier, so only the
+      installation that asked for it can ask for it back.</li>
   <li><strong>We do not use it to train anything.</strong> Neither we nor our AI
       provider train models on it (see below).</li>
 </ul>
@@ -74,8 +96,9 @@ another app.</p>
 
 <h2>The AI service we use</h2>
 <p>The summarising is done by <strong>OpenAI</strong>, acting as our service
-provider. The page text is sent to OpenAI's API from our server, together with
-the instructions that tell it what kind of summary to produce.</p>
+provider. The page text and any page pictures are sent to OpenAI's API from our
+server, together with the instructions that tell it what kind of summary to
+produce.</p>
 <ul>
   <li>Every request we make sets OpenAI's <code>store</code> option to
       <em>false</em>, which instructs OpenAI not to retain the request or its
@@ -93,11 +116,11 @@ receives.</p>
 
 <h2>Please think before you send</h2>
 <p>The app is useful precisely on documents that matter — a tenancy agreement, a
-bill, a letter from an insurer. Because the text of whatever you choose is sent
-off your device to be read by an AI service, you should treat this app the way
-you would treat pasting the same text into any online service, and avoid using
-it on material you are not permitted to disclose to a third party, such as
-someone else's confidential or medical records.</p>
+bill, a letter from an insurer. Because whatever you choose is sent off your
+device to be read by an AI service — as text, or as a picture of the page — you
+should treat this app the way you would treat pasting the same document into any
+online service, and avoid using it on material you are not permitted to disclose
+to a third party, such as someone else's confidential or medical records.</p>
 
 <h2>Your anonymous account</h2>
 <p>The app signs in anonymously through Firebase Authentication the first time it
@@ -107,8 +130,10 @@ for any of those.</p>
 <p>Against that identifier we keep a small record on our server containing
 <strong>only counters and timestamps</strong>: how many credits you have used
 this month, how many free credits remain, when the allowance resets, and
-counters used to stop automated abuse. It contains no document text, no file
-names, and nothing that identifies you.</p>
+counters used to stop automated abuse. It contains no document text, no picture
+of a page, no file names, and nothing that identifies you. The short-lived copy
+of your answer described under "Your documents" is a separate record and expires
+on its own.</p>
 <p>If you uninstall the app or clear its data, your device forgets that identity
 and the app creates a new one the next time it runs. The old record is left
 holding nothing but counters.</p>
@@ -145,9 +170,10 @@ one.</p>
 
 <h2>Network use</h2>
 <p>The app needs network access to work at all: to sign in anonymously, to send
-the document text for summarising and receive the result, and to send the crash
-reports and usage counts described above. Unlike a purely on-device tool, it
-cannot function offline.</p>
+the prepared document for summarising and receive the result, and to send the
+crash reports and usage counts described above. Unlike a purely on-device tool, it
+cannot function offline. What travels is the prepared document — page text,
+page pictures, or both — and the answer that comes back.</p>
 
 <h2>Abuse prevention</h2>
 <p>To stop the free allowance being drained by automated traffic, the app uses
@@ -171,11 +197,12 @@ an advertising ID.</p>
 <p>The app and its server use the following services, which handle data under
 their own privacy policies:</p>
 <ul>
-  <li><strong>OpenAI</strong> — summarising the page text, as described
-      above.</li>
+  <li><strong>OpenAI</strong> — summarising the page text and page pictures, as
+      described above.</li>
   <li><strong>Firebase Authentication</strong> — the anonymous sign-in described
       above.</li>
-  <li><strong>Cloud Firestore</strong> — the credit counters described above.</li>
+  <li><strong>Cloud Firestore</strong> — the credit counters described above, and
+      the copy of the answer that is kept for about 15 minutes.</li>
   <li><strong>Firebase App Check / Google Play Integrity</strong> — abuse
       prevention.</li>
   <li><strong>Firebase Crashlytics</strong> — crash reports (stack traces, device
@@ -192,8 +219,15 @@ their own privacy policies:</p>
 Google handles this data.</p>
 
 <h2>Data retention and deletion</h2>
-<p>Your document text is not retained by us at all, so there is nothing of it to
-delete. Our servers pass it on, return the answer, and keep no copy.</p>
+<p>Your pages — their text, and any pictures the app made of them — are not
+retained by us. Our servers pass them on, return the answer, and keep no copy of
+the pages themselves.</p>
+<p>The answer is kept for about 15 minutes, and because each key point quotes the
+line it was taken from, that copy contains short verbatim excerpts of your
+document. It exists so that asking again collects the result you already paid
+for rather than buying a second one, and it is deleted automatically when the
+time is up — a job sweeps expired results every five minutes. Nothing you need
+to do makes that happen.</p>
 <p>The credit record described under "Your anonymous account" is kept for as long
 as the app is in use, because it is what stops the monthly allowance from being
 reset by reinstalling. It holds counters only.</p>
