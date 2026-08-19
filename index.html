@@ -1,5 +1,5 @@
 <h1>Privacy Policy — Kiddie Flashcards (renaming to Kids Flashcards: 9 Languages)</h1>
-<p>Last updated: August 17, 2026</p>
+<p>Last updated: August 19, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -38,11 +38,17 @@ The app is provided by yzyy, an individual developer based in Singapore ("we",
       way we ever learn who you are is if a parent chooses to email us feedback
       (see below).</li>
   <li>The app requests <strong>no</strong> sensitive Android permissions. Its
-      only permission is internet access, used to download flashcard pictures
-      and audio and to show ads.</li>
-  <li>The app shows ads through Google AdMob. Ads are configured as
-      <strong>child-directed and non-personalised</strong>, and are limited to
-      general-audience (G-rated) content.</li>
+      only permissions are internet access, used to download flashcard pictures
+      and audio, and Google Play's billing permission, used for the one-time
+      Pro unlock below.</li>
+  <li><strong>The app shows no ads.</strong> Google AdMob was removed
+      completely in version 2.2.0. There is no advertising SDK left in the app,
+      and no advertising identifier is collected.</li>
+  <li><strong>There is one optional purchase.</strong> A single, one-time
+      &quot;Pro&quot; unlock opens the rest of the card catalogue. There is no
+      subscription and no other charge. It is bought through Google Play's own
+      billing sheet, behind a parental gate, and the app never sees or stores
+      any payment details.</li>
   <li>The app sends anonymous usage counts and crash reports through Google
       Firebase so that it can be fixed and improved.</li>
   <li>We do not sell data, and we do not operate any servers of our own.</li>
@@ -54,13 +60,12 @@ have configured the app to enforce them in code, not merely to promise them:</p>
 <ul>
   <li>We do not knowingly collect personal information from children. The app
       has no fields in which a child could enter personal information, no
-      profile, no chat, no sharing feature and no in-app purchases.</li>
-  <li><strong>Ads are not personalised.</strong> The app tells the Google Mobile
-      Ads SDK to apply child-directed treatment
-      (<code>TAG_FOR_CHILD_DIRECTED_TREATMENT_TRUE</code>) and caps ad content at
-      the G rating, so ads are contextual rather than based on a profile of the
-      user, and no advertising profile is built from the child's use of the
-      app.</li>
+      profile and no chat. Its one purchase sits behind a parental gate, so a
+      child cannot reach the payment sheet unaided.</li>
+  <li><strong>There is no advertising of any kind.</strong> The app contains
+      no ad SDK, shows no ads, and builds no advertising profile from a child's
+      use of it. Versions up to 2.1.3 did show child-directed, non-personalised
+      ads through Google AdMob; that was removed entirely in version 2.2.0.</li>
   <li><strong>The analytics SDK is prevented from collecting the advertising
       identifier</strong> and from sending ad-personalisation signals
       (<code>google_analytics_adid_collection_enabled=false</code> and
@@ -88,12 +93,20 @@ Data safety declaration on the app's Google Play listing:</p>
       screens, card categories and features are used, so that the app can be
       improved. These are tied to a random installation identifier, not to a
       person.</li>
-  <li><strong>Device or other identifiers</strong> — identifiers used by the
-      Google services below to deliver ads, cap how often an ad is shown and
-      detect fraud or invalid traffic. As described above, they are not used to
-      personalise ads in this app.</li>
+  <li><strong>Device or other identifiers</strong> — a random,
+      app-specific installation identifier (the Firebase installation ID and
+      the analytics app instance ID) that lets the services below tell one
+      installation from another, so a crash report and the usage counts around
+      it belong together. It is <em>not</em> the device's advertising
+      identifier — the app does not collect that one — and it is
+      discarded when the app is uninstalled.</li>
+  <li><strong>Purchase history</strong> — if a parent buys the one-time
+      Pro unlock, the app records that the purchase completed, as one more
+      anonymous usage event of the kind above. It is the bare fact that a
+      purchase happened: no card details, no name, no receipt and no amount
+      ever reach us, because Google Play handles the payment itself.</li>
   <li><strong>IP address</strong> — like any internet request, downloading
-      pictures, audio and ads carries the device's IP address to the Google
+      pictures and audio carries the device's IP address to the Google
       service being contacted. An IP address can indicate approximate location
       such as a country or city; the app never requests, reads or transmits the
       device's GPS location, and holds no location permission at all.</li>
@@ -107,10 +120,10 @@ independently of us and under their own terms. Google's handling of that data is
 described in Google's privacy policy at
 <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
 <ul>
-  <li><strong>Google AdMob</strong> — serves the ads in the app. May receive
-      device information, identifiers and IP address for ad delivery, frequency
-      capping and fraud prevention. Configured for child-directed treatment and
-      G-rated, non-personalised ads, as described above.</li>
+  <li><strong>Google Play Billing</strong> — handles the one-time Pro
+      unlock. The payment happens inside Google Play under Google's own terms;
+      the app is told only whether the purchase succeeded, and never receives
+      or stores payment details.</li>
   <li><strong>Google Analytics for Firebase</strong> — records the anonymous
       usage events described above, with advertising-identifier collection and
       ad-personalisation signals switched off.</li>
@@ -131,14 +144,15 @@ else.</p>
 <h2>What the app does not do</h2>
 <ul>
   <li>It does not sell or rent data to anyone.</li>
-  <li>It does not show personalised or interest-based advertising.</li>
+  <li>It does not show ads of any kind, personalised or otherwise.</li>
   <li>It does not ask for or hold location, microphone, camera, contacts,
       storage or photo permissions.</li>
   <li>It has no login, no user profile, no chat and no user-generated content.
       The "share" button only passes a short message and a link to the app to
       Android's own share sheet, where you choose what to do with it; nothing
       about your use of the app is included and nothing is sent to us.</li>
-  <li>It has no in-app purchases or subscriptions.</li>
+  <li>It has no subscriptions and no recurring charges. The only way to spend
+      money in the app is the single one-time Pro unlock described above.</li>
 </ul>
 
 <h2>If you email us feedback</h2>
@@ -159,9 +173,9 @@ app stops all further collection.</p>
 
 <h2>Your choices and how to reach us</h2>
 <ul>
-  <li>You can reset or delete the device's advertising identifier at any time in
-      the Android settings, under <em>Privacy → Ads</em>, and on many devices you
-      can switch off ad personalisation system-wide.</li>
+  <li>The app does not use the device's advertising identifier at all, so
+      there is nothing to reset for it. The anonymous installation identifier
+      described above is discarded when you uninstall the app.</li>
   <li>Uninstalling the app ends any further data collection by it.</li>
   <li>Parents and guardians may email us to ask what has been collected about
       their child, or to ask us to delete it. Because the data described above
