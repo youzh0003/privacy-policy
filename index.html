@@ -1,14 +1,13 @@
-<h1>Privacy Policy — Kiddie Flashcards (renaming to Kids Flashcards: 9 Languages)</h1>
-<p>Last updated: August 19, 2026</p>
+<h1>Privacy Policy — Kids Flashcards: 9 Languages (formerly Kiddie Flashcards)</h1>
+<p>Last updated: August 26, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
 developer, as listed on Google Play:</p>
 <ul>
-  <li><strong>App name:</strong> currently listed on Google Play as
-      &quot;Kiddie Flashcards&quot;. A rename to &quot;Kids Flashcards: 9
-      Languages&quot; has been submitted and is awaiting Google Play review;
-      this policy covers the app under either name. The listing and package are
+  <li><strong>App name:</strong> listed on Google Play as &quot;Kids
+      Flashcards: 9 Languages&quot;, formerly &quot;Kiddie Flashcards&quot;.
+      This policy covers the app under either name; the listing and package are
       unchanged.</li>
   <li><strong>Package name / application ID:</strong> com.yzy.kidsflashcards</li>
   <li><strong>Google Play listing:</strong>
@@ -19,8 +18,8 @@ developer, as listed on Google Play:</p>
       <a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a></li>
 </ul>
 
-<p>Kiddie Flashcards (&quot;the app&quot;), also listed as Kids Flashcards: 9
-Languages once the pending rename is approved, teaches young children animals,
+<p>Kids Flashcards: 9 Languages (&quot;the app&quot;), formerly named Kiddie
+Flashcards, teaches young children animals,
 plants, the alphabet, numbers, colours, shapes and the world around them, in up to nine
 spoken languages, using picture flashcards, sounds, quizzes and short
 illustrated stories. This page explains what data the app handles and who it is
@@ -38,9 +37,12 @@ The app is provided by yzyy, an individual developer based in Singapore ("we",
       way we ever learn who you are is if a parent chooses to email us feedback
       (see below).</li>
   <li>The app requests <strong>no</strong> sensitive Android permissions. Its
-      only permissions are internet access, used to download flashcard pictures
-      and audio, and Google Play's billing permission, used for the one-time
-      Pro unlock below.</li>
+      only permissions are internet access — used by Google Play billing, by
+      the anonymous analytics and crash reporting described below, and by older
+      copies of the app that still download pictures from Firebase Storage;
+      the current version packages every picture, sound and story inside the
+      app — and Google Play's billing permission, used for the one-time Pro
+      unlock below.</li>
   <li><strong>The app shows no ads.</strong> Google AdMob was removed
       completely in version 2.2.0. There is no advertising SDK left in the app,
       and no advertising identifier is collected.</li>
@@ -105,9 +107,10 @@ Data safety declaration on the app's Google Play listing:</p>
       anonymous usage event of the kind above. It is the bare fact that a
       purchase happened: no card details, no name, no receipt and no amount
       ever reach us, because Google Play handles the payment itself.</li>
-  <li><strong>IP address</strong> — like any internet request, downloading
-      pictures and audio carries the device's IP address to the Google
-      service being contacted. An IP address can indicate approximate location
+  <li><strong>IP address</strong> — like any internet request, the analytics,
+      crash-reporting and billing calls described above carry the device's IP
+      address to the Google service being contacted (as do the picture
+      downloads that older copies of the app still make). An IP address can indicate approximate location
       such as a country or city; the app never requests, reads or transmits the
       device's GPS location, and holds no location permission at all.</li>
 </ul>
@@ -128,10 +131,14 @@ described in Google's privacy policy at
       usage events described above, with advertising-identifier collection and
       ad-personalisation signals switched off.</li>
   <li><strong>Firebase Crashlytics</strong> — records crash and error reports.</li>
-  <li><strong>Firebase Storage</strong> — hosts the flashcard pictures and audio
-      that the app downloads while you use it. These are ordinary file
-      downloads; the requests carry the device's IP address to Google, and no
-      information about the child is uploaded.</li>
+  <li><strong>Firebase Storage</strong> — <strong>no longer used by the current
+      version.</strong> Every picture, sound and story is packaged inside the
+      app as of version 2.2.1, so the app makes no file-download requests and
+      the Storage SDK is not present in it. Older copies still installed on a
+      device continue to download pictures and audio from Storage until they
+      update; those are ordinary file downloads that carry the device's IP
+      address to Google, and no information about the child is uploaded either
+      way.</li>
   <li><strong>Google Play In-App Review</strong> — used only when the app offers
       the standard Play review prompt. Any review you choose to write is handled
       by Google Play, not by the app.</li>
