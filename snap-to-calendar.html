@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Snap to Calendar</title>
 <h1>Privacy Policy — Snap to Calendar</h1>
-<p>Last updated: August 24, 2026</p>
+<p>Last updated: August 25, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -25,12 +25,21 @@ provided by yzyy, an individual developer based in Singapore ("we", "us").</p>
 
 <h2>Summary</h2>
 <ul>
-  <li><strong>Your screenshots, photos and text are never uploaded.</strong>
-      They are read on your phone, by software running on your phone, and they
-      do not leave it. There is no server of ours for them to go to.</li>
+  <li><strong>Your screenshots and photos are never uploaded.</strong> The words
+      in an image are always read on your phone, by software running on your
+      phone. The image itself does not leave the device — in any mode, ever.</li>
+  <li>The app has two extraction modes. <strong>Basic</strong> keeps everything
+      on the phone and works offline. <strong>Smart</strong>, if — and only if —
+      you switch it on, sends the recognized <em>text</em> to our server and to
+      Google's Gemini AI service to work out the event fields. The app asks you
+      plainly before the first time, and you can turn Smart off again at any
+      time. Until you agree, no text leaves your phone.</li>
+  <li>Text sent for Smart extraction is <strong>processed, not stored</strong>:
+      neither we nor our server keep the text or the extracted event after the
+      answer is returned to your phone.</li>
   <li>The app has no account and no sign-in. We do not know who you are.</li>
-  <li>The events and to-dos you save are stored on your phone. We never receive
-      them.</li>
+  <li>The events and to-dos you save, and your history, are stored on your
+      phone. We never receive them.</li>
   <li>The app does not read your calendar. When you tap "Add to calendar" it
       hands the event to the calendar app you already use, and that app decides
       what to do with it.</li>
@@ -42,45 +51,78 @@ provided by yzyy, an individual developer based in Singapore ("we", "us").</p>
 
 <h2>What you share with the app</h2>
 <p>You give the app a screenshot or photo (through Android's photo picker or the
-share sheet), or plain text (through the share sheet). It then does two things,
-both on your device:</p>
+share sheet), or plain text (through the share sheet). Reading the words out of
+an image always happens on your device, using Google's ML Kit text recognition.
+English recognition is bundled inside the app; Chinese recognition is an
+optional module you can switch on, which Google Play services downloads to the
+phone once and then runs offline like the rest. The image is not sent anywhere,
+in either case.</p>
+<p>What happens to the recognized words depends on the mode you chose:</p>
 <ul>
-  <li><strong>Reads the words in the image.</strong> This uses Google's ML Kit
-      text recognition, which is bundled inside the app and runs offline. The
-      image is not sent anywhere.</li>
-  <li><strong>Works out the event.</strong> On phones that ship Android's
-      built-in on-device AI (Gemini Nano, provided by the Android AICore system
-      service — Pixel 9 and newer, Galaxy S25 and newer, and a growing list of
-      others), the app asks that system service to interpret the words. AICore
-      is part of the operating system and runs the model on the phone itself; the
-      text is not sent to Google's servers by this app, and we receive nothing.
-      On every other phone the app uses its own built-in date and time detection
-      instead, which is also entirely on the device.</li>
+  <li><strong>Basic mode (the default).</strong> The app finds explicit dates,
+      times and places with its own built-in detection, entirely on the device.
+      Nothing leaves the phone. Basic is free, unlimited, and works with no
+      connection at all.</li>
+  <li><strong>Smart mode (only with your consent).</strong> The recognized text
+      — only the text, never the image — is sent over an encrypted connection to
+      our server, which passes it to Google's Gemini AI service (the Gemini API)
+      to turn it into event fields: a title, a date, a time, a place. The result
+      comes back to your phone and fills in the card. The text and the extracted
+      event are processed and returned, not stored: our server keeps no copy of
+      either after the request completes, and our server's logs do not contain
+      them. Google processes the text as our service provider to produce the
+      answer. Smart mode requires an internet connection; when it is off, or the
+      request fails, the app falls back to Basic on the phone.</li>
 </ul>
+<p>Smart mode is off until you turn it on. The app shows you a plain
+description of the above and asks for your choice before any text is sent, and
+you can revoke the choice at any time from the app's About screen. If you
+restore the app onto a new phone from a backup, it asks again.</p>
 <p>The app has no storage permission and cannot browse your files. It only ever
 sees the single image you pick in the system photo picker, or the item you send
-to it from another app.</p>
-<p>The image and the text are held only while the card is being prepared, and
-are discarded when you save or discard the card. The app never keeps a copy of
-the screenshot.</p>
+to it from another app. The image and the text are held only while the card is
+being prepared, and are discarded when you save or discard the card. The app
+never keeps a copy of the screenshot.</p>
+
+<h2>What our server stores</h2>
+<p>To count the free trial and verify Pro without an account, our server (run on
+Google Cloud, in Singapore) stores a small amount of non-content data:</p>
+<ul>
+  <li><strong>A random installation identifier</strong> the app generates on
+      first run. It identifies the installation, not you, and is not derived
+      from your device or any account.</li>
+  <li><strong>Usage counters</strong> tied to that identifier — how many Smart
+      extractions the installation has used (for the free trial) and a per-day
+      count (for a fair-use limit on Pro). Numbers only.</li>
+  <li><strong>Subscription verification records.</strong> When you buy Pro, the
+      app sends the Google Play purchase token to our server so it can confirm
+      the purchase with Google Play. The server stores only a keyed
+      cryptographic hash of that token — never the token itself — together with
+      the subscription's validity period, and receives standard subscription
+      status notifications from Google Play (renewed, cancelled, refunded) so
+      Pro stays correct.</li>
+</ul>
+<p>None of this contains anything you shared with the app. The text sent for
+Smart extraction is not stored, as described above.</p>
 
 <h2>What is stored on your phone</h2>
-<p>Everything the app remembers stays on the device:</p>
+<p>Everything the app remembers about your captures stays on the device:</p>
 <ul>
   <li><strong>Your history</strong> — the title, date, time and place of each
       event or to-do you saved, and whether a to-do is done.</li>
-  <li><strong>Your monthly capture count</strong> — a number and the month it
-      belongs to, so the free allowance can reset.</li>
-  <li><strong>Your Pro purchase status</strong> — whether the one-time unlock has
-      been bought.</li>
+  <li><strong>Your settings and choices</strong> — the Smart/Basic choice, the
+      OCR language choice, and the trial count shown in the app.</li>
+  <li><strong>Your Pro status</strong> — whether this installation currently has
+      Pro.</li>
 </ul>
-<p>None of this is sent to us. Uninstalling the app deletes all of it. You can
-delete any individual history entry from inside the app at any time.</p>
-<p>If you have Android's backup switched on, your phone may include the app's
-history and capture count in the backup Google keeps for your device, under
-Google's own terms. The Pro purchase record is deliberately <em>excluded</em>
-from that backup — a restored backup must not carry a purchase onto a device
-that never made one; Pro is restored from your Google Play account instead.</p>
+<p>Your history is never sent to us. Uninstalling the app deletes everything
+above. You can delete any individual history entry from inside the app at any
+time.</p>
+<p>The app deliberately keeps your history, your consent choice, your trial
+count and your Pro record <em>out</em> of Android's backups and device-to-device
+transfers: a new or restored phone starts with an empty history, asks for the
+Smart consent again, and restores Pro from your Google Play account rather than
+from a backup.</p>
 
 <h2>Your calendar</h2>
 <p>The app does not ask for calendar permission and cannot read, change or see
@@ -101,12 +143,13 @@ scheduled and delivered entirely on the device.</p>
       as the stack trace and the state of the device at the time.</li>
   <li><strong>Usage counts</strong> — a fixed, closed set of events: that a
       capture started and from which entry point, that extraction finished and
-      whether anything was found, which of the two extraction modes the phone
-      used, that something was saved to a calendar or as a to-do, that the free
-      monthly allowance ran out, and that the purchase screen was shown. Every
-      value is a number, a yes/no, or a label from a fixed list. The app provides
-      no way for the text you shared, an image, an event title, a date or a place
-      to be recorded in these.</li>
+      whether anything was found, which extraction mode ran and why a fallback
+      happened, the Smart/Basic consent choice as a yes/no, that something was
+      saved to a calendar or as a to-do, that the trial ran out, and that the
+      subscription screen was shown or a purchase started. Every value is a
+      number, a yes/no, or a label from a fixed list. The app provides no way
+      for the text you shared, an image, an event title, a date or a place to be
+      recorded in these.</li>
 </ul>
 <p>This information is tied to a random installation identifier generated by
 Google's software. We do not ask for or store anything that identifies you
@@ -123,22 +166,33 @@ app, and the analytics library is configured not to attach one to anything it
 sends.</p>
 
 <h2>Payments</h2>
-<p>The app is free to install and includes a number of free captures each month.
-The optional Pro unlock is a single one-time purchase — there is no subscription.
-It is sold through Google Play. Google processes the payment; we never receive or
-store your payment details, your card, your name or your billing address. What
-the app learns from Google Play is whether this Google account owns the unlock.
-Reinstalling restores it from the same account.</p>
+<p>The app is free to install. Basic mode is free and unlimited, and there is a
+one-time free trial of Smart extractions. The optional <strong>Pro
+subscription</strong> (monthly or yearly) unlocks unlimited Smart extraction and
+export; the exact price for your country is shown in the app before you pay.
+It is sold through Google Play: Google processes the payment; we never receive
+or store your payment details, your card, your name or your billing address.
+What our server learns from Google Play is whether the subscription is valid
+and until when, as described under "What our server stores". You can cancel any
+time in Google Play, and Pro lasts until the end of the period you paid for.
+Reinstalling restores Pro from the same Google account. If you bought the app's
+earlier one-time unlock during testing, it is honoured as lifetime Pro.</p>
 
 <h2>Third-party services</h2>
-<p>The app uses the following, which handle data under their own policies:</p>
+<p>The app and our server use the following, which handle data under their own
+policies:</p>
 <ul>
-  <li><strong>ML Kit text recognition</strong> — reads the words in an image.
-      Bundled in the app and runs on the device; nothing is uploaded.</li>
-  <li><strong>Android AICore / Gemini Nano</strong> — on supported phones, the
-      operating system's own on-device AI interprets the words. It is part of
-      Android, provided by Google, and runs the model on the phone.</li>
-  <li><strong>Google Play Billing</strong> — the one-time Pro purchase.</li>
+  <li><strong>ML Kit text recognition</strong> — reads the words in an image, on
+      the device. English is bundled in the app; the optional Chinese module is
+      downloaded once by Google Play services and then also runs on the device.
+      Images are never uploaded.</li>
+  <li><strong>Google Gemini API</strong> — in Smart mode only, and only with
+      your consent, Google processes the recognized text as our service provider
+      to extract the event fields. Processed, not stored by us; handled by
+      Google under its API terms.</li>
+  <li><strong>Google Cloud</strong> — runs our server (in Singapore) and stores
+      the counters and verification records described above.</li>
+  <li><strong>Google Play Billing</strong> — the Pro subscription.</li>
   <li><strong>Firebase Crashlytics</strong> — crash reports (stack traces, device
       state at the time of a crash).</li>
   <li><strong>Google Analytics for Firebase</strong> — the usage counts described
@@ -153,26 +207,32 @@ Reinstalling restores it from the same account.</p>
 Google handles this data.</p>
 
 <h2>Network use</h2>
-<p>Reading a screenshot and finding the event work with no connection at all.
-The app uses the network only for the crash reports and usage counts described
-above, and for Google Play to confirm the Pro purchase.</p>
+<p>Basic mode works with no connection at all. The app uses the network for
+Smart extraction (only with your consent), for the one-time download of the
+optional Chinese recognition module, for verifying the Pro subscription, and
+for the crash reports and usage counts described above.</p>
 
 <h2>Data retention and deletion</h2>
-<p>We hold no copy of your screenshots, your text or your events, so there is
-nothing on our side to retain or delete. Everything the app stores lives on your
-phone and is removed when you delete an entry or uninstall the app.</p>
+<p>We hold no copy of your screenshots, your text or your events. Text sent for
+Smart extraction is processed and discarded, not retained. What our server does
+retain — the installation identifier, its usage counters and the hashed
+subscription records — is kept only while it is needed to run the trial and
+Pro; if you want it deleted, email us the request from inside the app's report
+link and we will remove the records for your installation identifier.
+Everything stored on the phone is removed when you delete an entry or uninstall
+the app.</p>
 <p>Data collected by the Google services above is retained under Google's
 retention policies: usage data for a limited period, and crash reports only as
 long as they are useful for fixing problems. Uninstalling the app stops all
 collection.</p>
 
 <h2>Accuracy</h2>
-<p>The event details the app suggests are produced by software reading an image,
-and they can be wrong. That is why the app always shows you an editable card and
-saves nothing until you confirm it. Every result screen has a report link that
-opens your own email app with a message already written; it contains no
-screenshot and nothing quoted from what you shared, and it is not sent until you
-send it.</p>
+<p>The event details the app suggests are produced by software reading an image
+— and, in Smart mode, by an AI model reading the text — and they can be wrong.
+That is why the app always shows you an editable card and saves nothing until
+you confirm it. Every result screen has a report link that opens your own email
+app with a message already written; it contains no screenshot and nothing
+quoted from what you shared, and it is not sent until you send it.</p>
 
 <h2>Children</h2>
 <p>The app is a general productivity tool. It is not directed at children under
