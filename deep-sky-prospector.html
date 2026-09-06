@@ -41,27 +41,43 @@ individual developer based in Singapore ("we", "us").</p>
   <li><strong>Your game save never leaves your device.</strong> There is no
       cloud save, no leaderboard, no multiplayer and no server of ours for it
       to go to — we operate no servers at all.</li>
-  <li><strong>The app shows no ads.</strong> There is no advertising SDK in the
-      build, and <strong>no advertising identifier is collected</strong> — the
-      advertising-ID permissions that Google's analytics library would
-      otherwise add have been removed from the app's manifest and
-      advertising-ID collection is switched off in code.</li>
-  <li><strong>There are no purchases.</strong> The app contains no billing
-      code: nothing in it can be bought, and no payment sheet exists.</li>
+  <li><strong>The app shows ads, and it collects the advertising ID to do
+      so.</strong> There is one small banner on two of the game's screens, and
+      one optional short video you can choose to watch for one extra scan
+      (up to eight a day). Ads come from Google AdMob, which reads your
+      device's advertising identifier to show and frequency-cap them. Where
+      the law requires consent, you are asked before any ad is shown, and you
+      can change that answer later under Settings &rsaquo; Ad privacy
+      options.</li>
+  <li><strong>There is one purchase: Pro.</strong> A single one-time payment,
+      not a subscription. It removes the banner and unlocks four cabin
+      decorations. <strong>It never sells luck</strong> — it adds no scans,
+      changes no probability, and helps with nothing random in the game.
+      Google Play handles the payment; <strong>no card, name, address or
+      billing detail ever reaches the app.</strong></li>
   <li>The app requests <strong>no</strong> runtime permissions — no location,
       no camera, no microphone, no contacts, no storage, no photos, no
       notifications.</li>
-  <li>The app does send anonymous crash reports and anonymous usage counts
-      through Google Firebase so that defects can be found and the game
-      improved. That is the whole of the data collection.</li>
-  <li>We do not sell or share data with anyone, and there is no advertising or
-      marketing use of any of it.</li>
+  <li>The app sends anonymous crash reports and anonymous usage counts through
+      Google Firebase so that defects can be found and the game improved.
+      Together with the advertising ID, the ad impressions and the Pro
+      ownership answer above, that is the data collection — the complete list
+      is in "What data the app handles" below.</li>
+  <li>We sell nothing to anyone. Two things are shared, both with Google as the
+      app's ad network: your advertising ID, and the fact that an ad was shown,
+      clicked or watched to the end. Both are described below.</li>
 </ul>
 
 <h2>What data the app handles</h2>
-<p>The app itself asks for nothing about you. The data below is collected
-automatically by the two Google services listed in the next section, and it
-matches the Data safety declaration on the app's Google Play listing:</p>
+<p>The app itself asks for nothing about you: no name, no email, no account.
+Everything below is collected automatically by the Google services listed in
+the next section, and this list is complete. The first five entries are exactly
+the five data types ticked in the Data safety declaration on the app's Google
+Play listing — Crash logs, Diagnostics, App interactions, Device or other IDs
+(the installation identifiers and the advertising ID together) and Purchase
+history. The last two are named here for honesty rather than because Play has a
+box for them: an IP address is inherent to any internet request, and your
+consent answers exist only so you are not asked twice.</p>
 <ul>
   <li><strong>Crash logs</strong> — if the app crashes or hits an error, a
       report containing the device model, the Android version and a diagnostic
@@ -69,20 +85,44 @@ matches the Data safety declaration on the app's Google Play listing:</p>
   <li><strong>Diagnostics</strong> — basic performance, session and error
       information of the same kind (for example how long a session lasted, or
       that the app started).</li>
-  <li><strong>App interactions</strong> — coarse, aggregated counts of which
-      screens and features are used (for example that a scan was performed or
-      the codex was opened), so that the game can be improved. These are tied
-      to a random installation identifier, not to a person.</li>
-  <li><strong>Device or other identifiers</strong> — a random, app-specific
+  <li><strong>App interactions — collected, and partly shared</strong>. Coarse,
+      aggregated counts of which screens and features are used (for example
+      that a scan was performed or the codex was opened), so that the game can
+      be improved; these go to the analytics service only and are tied to a
+      random installation identifier, not to a person. An ad shown, clicked or
+      watched to the end is also an app interaction, and that half goes to
+      Google as the ad network — the second of the two things this app
+      shares.</li>
+  <li><strong>Installation identifiers</strong> — a random, app-specific
       installation identifier (the Firebase installation ID and the analytics
-      app instance ID) that lets the services below tell one installation from
-      another, so that a crash report and the events around it belong
-      together. It is <em>not</em> the device's advertising identifier — the
-      app does not collect that one — and it is discarded when the app is
-      uninstalled.</li>
+      app instance ID) that lets the crash and analytics services tell one
+      installation from another, so that a crash report and the events around
+      it belong together. It identifies an installation, not a person, and it
+      is discarded when the app is uninstalled. It is a different thing from
+      the advertising ID in the next entry: Google Analytics for Firebase is
+      configured <em>not</em> to read the advertising ID, and only the ad
+      service does.</li>
+  <li><strong>Advertising ID — collected</strong>. The resettable advertising
+      identifier Android provides. It is read by Google AdMob to select ads, to limit how
+      often you see the same one, and to measure whether an ad led to an
+      install. Where consent is required it is collected only after you agree.
+      You can reset or delete it at any time in Android's own settings
+      (Settings &rsaquo; Privacy &rsaquo; Ads), and you can opt out of
+      personalised ads there. This identifier goes to Google as the ad
+      network — one of the two things this app shares.</li>
+  <li><strong>Purchase history — collected</strong>. Whether the Google
+      account on this device owns the one-time Pro product. Google Play tells the app the
+      answer and the app stores that answer on the device so it knows whether
+      to hide the banner and unlock the cosmetics. <strong>No payment
+      information reaches the app at all</strong>: the payment sheet is Google
+      Play's own, running in Google Play's app.</li>
+  <li><strong>Your consent answers</strong> — if you are shown a consent form,
+      your answers are stored on the device by Google's User Messaging
+      Platform so you are not asked again, and reported to Google's consent
+      service so ads respect them.</li>
   <li><strong>IP address</strong> — like any internet request, the crash and
-      analytics uploads described above carry the device's IP address to the
-      Google service being contacted. An IP address can indicate approximate
+      analytics uploads described above — and every ad request — carry the
+      device's IP address to the Google service being contacted. An IP address can indicate approximate
       location such as a country or city; the app never requests, reads or
       transmits the device's GPS location, and holds no location permission at
       all.</li>
@@ -91,15 +131,16 @@ matches the Data safety declaration on the app's Google Play listing:</p>
 
 <h2>Your game save</h2>
 <p>Your progress — ore, crystals, the species you have identified, the pieces
-on your display case, your ship, decor and settings — is stored only in the
-app's own private storage on your device, as a single local file. It is never
-uploaded, never backed up to us and never shared with any third party. If
+on your display case, your ship, decor and settings — is stored in the app's
+own private storage on your device, as a single local file. It is never
+uploaded to us, never sent to any third party, and nothing in it reaches the ad
+service. If
 Android's own device backup is enabled on your phone, Android may include that
 file in your personal Google backup under Google's terms, not ours.
 Uninstalling the app deletes the save.</p>
 
 <h2>Third-party services used by the app</h2>
-<p>The app includes exactly two Google services, which collect data
+<p>The app includes the Google services listed below, which collect data
 independently of us and under their own terms. Google's handling of that data
 is described in Google's privacy policy at
 <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
@@ -108,24 +149,57 @@ is described in Google's privacy policy at
       reports described above (stack traces and device state at the time of the
       crash).</li>
   <li><strong>Google Analytics for Firebase</strong> — records the anonymous
-      usage events described above, with advertising-identifier collection
-      switched off
-      (<code>google_analytics_adid_collection_enabled=false</code>) and the
-      advertising-ID permissions removed from the app's manifest.</li>
+      usage events described above. It is configured <em>not</em> to read the
+      advertising identifier
+      (<code>google_analytics_adid_collection_enabled=false</code>): the
+      advertising ID in this app is used by the ad service below, for
+      advertising, and never to enrich analytics.</li>
+  <li><strong>Google AdMob (Google Mobile Ads SDK)</strong> — serves the banner
+      and the optional rewarded video, and reads the advertising identifier
+      described above to select and frequency-cap them and to measure ad
+      conversions. Google acts as our advertising partner here; how Google uses
+      data in advertising is described at
+      <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a>.
+      The ad units will be configured to exclude gambling and casino
+      advertising before any ad is served to a player — the game is rated 13
+      and over.</li>
+  <li><strong>Google User Messaging Platform</strong> — shows the consent form
+      where privacy law requires one (for example in the EEA and the UK) and
+      remembers your answer. The "Ad privacy options" row in the game's
+      Settings re-opens that form so you can change it.</li>
+  <li><strong>Google Play Billing</strong> — handles the one-time Pro purchase
+      and tells the app whether this account owns it. The payment itself
+      happens inside Google Play; the app receives an ownership answer and
+      nothing else.</li>
 </ul>
-<p>There is no advertising SDK, no billing library, no social or login SDK, no
-attribution or marketing SDK, and no analytics service other than the one
-above. We can see the reports these two services produce in Google's own
+<p>One more thing belongs in this list, because it is attribution and calling
+it nothing else would be untrue: Google Analytics for Firebase reads the
+<strong>Google Play install referrer</strong> once, shortly after installation,
+through Google Play's own referrer service. It says which Play campaign or link
+the install came from. It is a one-time read and it carries no identifier of
+yours. Together with AdMob's own measurement of whether an ad led to an
+install, that is the attribution the app does.</p>
+<p>Beyond that there is no ad mediation and no second ad network, no social or
+login SDK, no third-party attribution or marketing SDK (no AppsFlyer, Adjust,
+Branch, Facebook or similar), and no analytics service other than the one
+above. We can see the reports these services produce in Google's own
 dashboards, in aggregate form. We do not receive, store or have any way to look
 up an individual player's data, and we do not combine this information with
 anything else.</p>
 
 <h2>What the app does not do</h2>
 <ul>
-  <li>It does not sell, rent or share data with anyone.</li>
-  <li>It does not show ads of any kind, personalised or otherwise, and it
-      collects no advertising identifier.</li>
-  <li>It contains no in-app purchases, no subscriptions and no billing code.</li>
+  <li>It does not sell or rent data to anyone. What it shares is named above
+      and is only those two things, both with Google as the ad network.</li>
+  <li>It shows no interstitial and no forced ad: the video is always your
+      choice, and skipping it costs you nothing the free game does not already
+      give you.</li>
+  <li>It sells nothing that affects luck. The Pro purchase adds no scans,
+      changes no probability and touches nothing random; the game's odds are
+      published inside the app, under Settings &rsaquo; Odds.</li>
+  <li>It contains no subscription — Pro is a single one-time purchase, so
+      there is nothing to cancel and no recurring charge.</li>
+  <li>It never sees your payment details.</li>
   <li>It does not ask for or hold location, camera, microphone, contacts,
       storage or photo permissions.</li>
   <li>It has no login, no user profile, no chat, no friends list, no
@@ -137,22 +211,30 @@ anything else.</p>
 <h2>Children</h2>
 <p>Deep Sky Prospector is a general-audience game intended for players aged 13
 and over. It is <strong>not</strong> directed at children under 13, its Google
-Play target-audience declaration excludes the under-13 age groups, and we do
-not knowingly collect personal information from children. If you believe a
+Play target-audience declaration excludes the under-13 age groups, it is not
+part of Google Play's Families programme, and we do not knowingly collect
+personal information from children. The advertising described above is aimed at
+that same 13-and-over audience. If you believe a
 child under 13 has used the app and that information about them was collected,
 email <a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a> and we will
 act on it.</p>
 
 <h2>Data retention and deletion</h2>
-<p>The crash reports and anonymous usage events are held by Google under
-Firebase's own retention settings and are deleted according to them; we keep no
-separate copy and we have no database of our own. Uninstalling the app deletes
-your local game save and stops all further collection.</p>
+<p>The crash reports, anonymous usage events and advertising data are held by
+Google under its own retention settings and are deleted according to them; you
+can reset the advertising identifier yourself at any time in Android's Settings
+&rsaquo; Privacy &rsaquo; Ads, which breaks the link between past and future ad
+data. Your Pro purchase is a record held by Google Play under your Google
+account — we cannot delete it, and deleting it would take away something you
+paid for. We keep no separate
+copy of any of it and we have no database of our own. Uninstalling the app
+deletes your local game save and stops all further collection.</p>
 <p>You may ask us what has been collected about your installation, or ask us to
 delete it, by emailing
-<a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a>. Because the data
-described above is not tied to a name or an account, please tell us the
-approximate date and the device model so that we can ask Google to locate and
+<a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a>. Apart from the
+Pro purchase, which Google Play holds against your Google account, none of the
+data described above is tied to a name or an account — so please tell us the
+approximate date and the device model, and we will ask Google to locate and
 delete the matching records. We will reply within 30 days.</p>
 
 <h2>Changes to this policy</h2>
