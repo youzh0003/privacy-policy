@@ -1,5 +1,5 @@
 <h1>Privacy Policy for SG Bus Arrival &amp; MRT Times (formerly SG Bus - Easy)</h1>
-<p>Last updated: August 10, 2026</p>
+<p>Last updated: September 24, 2026</p>
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its developer, as listed on Google Play:</p>
 <ul>
@@ -64,7 +64,7 @@
 <p>When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.</p>
 <p>We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.</p>
 <h4>Location Data</h4>
-<p>The Application requests permission to access Your device's location. Your location data is used solely on Your device to compute the distance between Your current position and nearby bus stops. <strong>Your location data is not transmitted to any external server or backend.</strong> It is processed entirely on Your device and is not stored or shared with any third party.</p>
+<p>The Application requests permission to access Your device's location. For nearby bus stops, Your location is used only on Your device to compute the distance to each stop, and it is not transmitted. <strong>The one exception is the trip planner:</strong> when You plan a trip, the start and destination You chose are sent to OneMap, the Singapore Land Authority's mapping service, as described below. If You choose "current location" as one end, that end is Your device's precise location at the time You tap Plan. The Application does not store Your location, and it has no servers of its own.</p>
 <p>You can enable or disable access to location services at any time through Your device settings.</p>
 <h3>Third-party services used by the Application</h3>
 <p>The Application includes the following third-party Google services, which collect data independently of Us. Their collection is described in Google's own privacy policy at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
@@ -79,8 +79,14 @@
 <p><strong>Google Firebase Crashlytics</strong> (stability) — records crash and error reports, including device model, operating system version, and diagnostic stack traces, so that defects can be found and fixed.</p>
 </li>
 </ul>
+<p><strong>OneMap (Singapore Land Authority)</strong>, the trip planner. The Application sends these only when You use the planner, over an encrypted (HTTPS) connection, directly to OneMap at www.onemap.gov.sg:</p>
+<ul>
+<li><p><strong>Route planning:</strong> the start and destination coordinates of the trip You ask for (Your precise location if You chose "current location"), plus the date and time of the request, so that OneMap can return bus and MRT routes.</p></li>
+<li><p><strong>Place search:</strong> the text You type while searching for a place, so that OneMap can return matching places.</p></li>
+</ul>
+<p>No account, name or device identifier is sent with these requests. OneMap handles them under the Singapore Land Authority's own terms and privacy statement at <a href="https://www.onemap.gov.sg/legal/privacystatement.html" target="_blank">onemap.gov.sg</a>. The Application keeps no history of Your searches or trips. To access OneMap, the Application uses Google Firebase Remote Config to receive a shared access key. That request carries the same random installation identifier that Firebase Analytics already uses.</p>
 <p>Bus arrival and bus stop data is requested from Singapore's LTA DataMall service. Those requests carry standard network metadata such as Your IP address to that service. <strong>Your location coordinates are never sent to LTA DataMall or to Us</strong> — the Application has no servers of its own.</p>
-<p>Taken together, the categories of data collected through the Application are: precise location (used on Your device only), approximate location inferred from IP address by the services above, device and advertising identifiers, app interactions, diagnostics and crash logs. This matches the Data safety declaration on the Application's Google Play listing.</p>
+<p>Taken together, the categories of data collected through the Application are: precise and approximate location (used on Your device, and shared with OneMap only when You plan a trip), in-app search text (shared with OneMap only when You search for a place in the trip planner), approximate location inferred from IP address by the services above, device and advertising identifiers, app interactions, diagnostics and crash logs. This matches the Data safety declaration on the Application's Google Play listing.</p>
 <h3>Use of Your Personal Data</h3>
 <p>The Company may use Personal Data for the following purposes:</p>
 <ul>
