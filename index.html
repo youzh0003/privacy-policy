@@ -37,13 +37,20 @@ The app is provided by yzyy, an individual developer based in Singapore ("we",
       email address, phone number, photo or any other personal detail. The only
       way we ever learn who you are is if a parent chooses to email us feedback
       (see below).</li>
-  <li>The app requests <strong>no</strong> sensitive Android permissions. Its
-      only permissions are internet access — used by Google Play billing, by
-      the anonymous analytics and crash reporting described below, and by older
-      copies of the app that still download pictures from Firebase Storage;
-      the current version packages every picture, sound and story inside the
-      app — and Google Play's billing permission, used for the one-time Pro
-      unlock below.</li>
+  <li>The app requests <strong>no</strong> runtime or sensitive Android
+      permissions — nothing that Android asks you to approve. It uses only
+      normal permissions: network access (internet and network state) — used
+      by Google Play billing, by the anonymous analytics and crash reporting
+      described below, and by older copies of the app that still download
+      pictures from Firebase Storage; the current version packages every
+      picture, sound and story inside the app — and Google Play's billing
+      permission, used for the one-time Pro unlock below. Google's libraries
+      add a few more normal permissions: Firebase Analytics adds a wake lock
+      (so a batch of usage counts can finish sending), the Google Play install
+      referrer (which tells us the app came from Google Play) and the Privacy
+      Sandbox attribution permission; the advertising ID permissions are
+      removed and the advertising ID is not used. An Android support library
+      also adds one private permission that only the app itself can hold.</li>
   <li><strong>The app shows no ads.</strong> Google AdMob was removed
       completely in version 2.2.0. There is no advertising SDK left in the app,
       and no advertising identifier is collected.</li>
