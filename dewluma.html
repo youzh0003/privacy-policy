@@ -26,15 +26,18 @@ does not delete. The app is provided by yzyy, an individual developer based in S
 
 <h2>Summary</h2>
 <ul>
-  <li>Your habits, check-ins, moods, notes and your pet stay on your device. The developer has
-      no server that receives them.</li>
-  <li>They can leave your device only through Android backup, device-to-device transfer, or an
-      export you start yourself (see <a href="#leaves">When that data leaves your device</a>).</li>
+  <li>Your habits, notes and moods stay on your device; only the fixed usage values listed under
+      <a href="#analytics">Analytics</a> are sent (for example your pet's stage, the personality
+      trait of a postcard answer, and daily counts of completions), never names, notes, which habit
+      or your mood. The developer has no server that receives your data.</li>
+  <li>Apart from those values, what you put in the app can leave your device only through Android
+      backup, device-to-device transfer, or an export you start yourself (see
+      <a href="#leaves">When that data leaves your device</a>).</li>
   <li>The app sends fixed usage events to Google Analytics for Firebase and crash reports to
       Firebase Crashlytics. They never contain which habit you did, how you felt, or anything you
       wrote (see <a href="#analytics">Analytics</a> and <a href="#crashes">Crash reports</a>).</li>
-  <li>The app downloads new postcard stories as static files from our content host, Cloudflare
-      (see <a href="#stories">Story downloads</a>).</li>
+  <li>The app may download new postcard stories as static files from our content host,
+      Cloudflare (see <a href="#stories">Story downloads</a>).</li>
   <li>Optional decor packs are one-time purchases through Google Play Billing.</li>
   <li>No ads, no advertising ID, no accounts, no sign-in.</li>
 </ul>
@@ -43,7 +46,10 @@ does not delete. The app is provided by yzyy, an individual developer based in S
 <p>Your habits, check-ins, mood ratings and notes, your pet's name and progress, postcards and
 decorations are stored on your device. They are not sent to the developer, and the developer has
 no server that receives them. This also covers the name you may give yourself, the answers you
-pick on postcards and journeys, and your reminder time.</p>
+pick on postcards and journeys, and your reminder time. The only exception is the fixed values
+listed under <a href="#analytics">Analytics</a>: your pet's stage, the personality trait of a
+postcard answer you picked, and daily counts of completions. Names, notes, which habit you did and
+your mood are never sent.</p>
 
 <h2 id="personal">Personalised lines</h2>
 <p>Some of your pet's lines mention your pet's name, your name, your habit names, or when you
@@ -51,7 +57,8 @@ usually check in. They are put together on your device from what you've already 
 Nothing is sent anywhere, and the app keeps no extra record of it.</p>
 
 <h2 id="leaves">When that data leaves your device</h2>
-<p>There are three ways the data above can leave your device:</p>
+<p>Apart from the fixed Analytics values, there are three ways the data above can leave your
+device:</p>
 <ol>
   <li><strong>Android backup:</strong> if backup is on in your phone's settings, Android includes
       this data in your Google account backup and may restore it on a new phone. Google stores and
@@ -69,9 +76,9 @@ story files the app has accepted. They never include your purchase records (see
 backup are downloaded again.</p>
 
 <h2 id="stories">Story downloads</h2>
-<p>The app downloads new postcard stories (text and pictures) as static files from our content
-host, Cloudflare. The app never uploads your habits, moods, your pet's name, your answers or your
-collection. Like any web request, the host processes technical information such as your IP
+<p>The app may download new postcard stories (text and pictures) as static files from our
+content host, Cloudflare. The app never sends your habits, moods, your pet's name, your answers or
+your collection to the content host. Like any web request, the host processes technical information such as your IP
 address, the time and the file requested, to deliver the files and keep the service secure. When
 the app restores pictures for stories you already have, the files it requests show which story
 packs you have. Downloaded stories are kept on your device; Delete all data removes your stories
@@ -137,9 +144,10 @@ can restore them in Settings at any time. We never receive your card number, bil
 any other payment detail.</p>
 
 <h2 id="delete">Deleting your data</h2>
-<p><em>Delete all data</em> (Settings) removes everything stored in the app on this device: your
-pet, habits, check-ins, moods, notes, postcards, answers, decorations, reminder and settings, and
-the usage counts waiting to be sent. It also resets the Google Analytics app-instance ID, so new
+<p><em>Delete all data</em> (Settings) removes your pet, habits, history, postcards, settings and
+reminders from this device, including your check-ins, moods, notes, answers and decorations, and the
+usage counts waiting to be sent. Your Play purchase record and the shared story files are kept so
+you can restore purchases and keep reading. It also resets the Google Analytics app-instance ID, so new
 usage events start under a new ID. It does not change other identifiers on the device (such as the
 Firebase installation ID or the Crashlytics installation ID), so it does not give the app a new
 device identity.</p>
