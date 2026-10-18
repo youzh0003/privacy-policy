@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Dewluma: Glow Pet &amp; Habits</title>
 <h1>Privacy Policy — Dewluma: Glow Pet &amp; Habits</h1>
-<p>Effective date: October 16, 2026</p>
+<p>Effective date: October 18, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -107,11 +107,15 @@ log exports or web analytics for the content host. Cloudflare's own handling is 
 Habit and check-in completions are sent only as a count for each day, the next day you open the
 app, not when you complete them (apart from a one-time setup step during onboarding). Like any app
 analytics, they do show when the app is in use.</p>
-<p>The app sends only these 15 events. Each one carries at most the fixed values listed; there is
+<p>The app sends only these 16 events. Each one carries at most the fixed values listed; there is
 no free text:</p>
 <ul>
   <li><code>app_open</code> (no values)</li>
   <li><code>onboarding_step</code>: step (meet, name, owner, question, plan, first_action)</li>
+  <li><code>meet_result</code>, sent once, with the next day's batch, after you first meet your pet:
+      how the meeting began (hello, touch, meet_now, continue), how it ended (watched, meet_now,
+      reduced_motion, fallback), whether it resumed after the app was closed (no, yes), and a
+      time bucket in seconds (0_10, 10_20, 20_40, 40_90, 90_plus)</li>
   <li><code>first_action</code> (no values)</li>
   <li><code>action_completed</code> (no values; a count only)</li>
   <li><code>pet_interaction</code>: interaction kind (tap, long_press)</li>
