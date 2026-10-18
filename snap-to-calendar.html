@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Snap to Calendar</title>
 <h1>Privacy Policy — Snap to Calendar</h1>
-<p>Last updated: August 25, 2026</p>
+<p>Last updated: October 17, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -25,9 +25,18 @@ provided by yzyy, an individual developer based in Singapore ("we", "us").</p>
 
 <h2>Summary</h2>
 <ul>
-  <li><strong>Your screenshots and photos are never uploaded.</strong> The words
-      in an image are always read on your phone, by software running on your
-      phone. The image itself does not leave the device — in any mode, ever.</li>
+  <li><strong>Your screenshots and photos are never uploaded unless you use group
+      snap.</strong> In Basic and normal Smart the words in an image are read on
+      your phone, by software running on your phone, and the image itself does
+      not leave the device.</li>
+  <li><strong>Group snap</strong> (reading a whole schedule from one image) is
+      the one exception. Only if you choose it, and only after a separate
+      consent just for images, the image you selected is sent to our server and
+      to Anthropic's Claude AI to find every event in it. Our server does not
+      keep the image. Anthropic deletes it within 30 days, or keeps it for up to
+      2 years if its safety systems flag it. The events found are kept on our
+      server for up to two days so a lost reply can be recovered. See
+      "Group snap" below.</li>
   <li>The app has two extraction modes. <strong>Basic</strong> keeps everything
       on the phone and works offline. <strong>Smart</strong>, if — and only if —
       you switch it on, sends the recognized <em>text</em> to our server and to
@@ -55,8 +64,9 @@ share sheet), or plain text (through the share sheet). Reading the words out of
 an image always happens on your device, using Google's ML Kit text recognition.
 English recognition is bundled inside the app; Chinese recognition is an
 optional module you can switch on, which Google Play services downloads to the
-phone once and then runs offline like the rest. The image is not sent anywhere,
-in either case.</p>
+phone once and then runs offline like the rest. In Basic and Smart mode the
+image is not sent anywhere, in either case; only group snap, described below,
+uploads an image.</p>
 <p>What happens to the recognized words depends on the mode you chose:</p>
 <ul>
   <li><strong>Basic mode (the default).</strong> The app finds explicit dates,
@@ -76,8 +86,46 @@ in either case.</p>
 </ul>
 <p>Smart mode is off until you turn it on. The app shows you a plain
 description of the above and asks for your choice before any text is sent, and
-you can revoke the choice at any time from the app's About screen. If you
+you can revoke the choice at any time from the app's Settings screen. If you
 restore the app onto a new phone from a backup, it asks again.</p>
+
+<h2>Group snap (image upload, only when you choose it)</h2>
+<p>Group snap reads a whole schedule — for example a timetable or a list of
+appointments — from one image. It is the only feature that uploads an image,
+and it works like this:</p>
+<ul>
+  <li><strong>Only when you choose it, with its own consent.</strong> The first
+      time you use group snap, the app explains what happens and asks for a
+      separate consent just for images. It is independent of the Smart consent:
+      agreeing to Smart does not allow images to be uploaded, and agreeing to
+      group snap does not switch Smart on. Until you agree, no image leaves your
+      phone.</li>
+  <li><strong>What is sent.</strong> The single image you selected is sent over
+      an encrypted connection to our server and to Anthropic's Claude AI, and is
+      used only to find the events in it. Before sending, the app re-encodes the
+      image, which removes its embedded metadata such as GPS location.</li>
+  <li><strong>Anthropic as our service provider.</strong> Anthropic processes
+      the image as our service provider to extract the event fields (title,
+      date, time, place).</li>
+  <li><strong>Our server keeps no image.</strong> Our server holds the image in
+      memory only for the one request to Anthropic and then drops it. It is never
+      written to our database, to file storage or to our logs.</li>
+  <li><strong>Anthropic's retention.</strong> Anthropic deletes the image, and
+      the result it returned, within 30 days. If its safety systems flag the
+      request, Anthropic may keep it for up to 2 years. We have no agreement
+      with Anthropic that shortens this.</li>
+  <li><strong>The events found are cached briefly.</strong> The extracted events
+      (their titles, dates, times and places) are kept on our server so that, if
+      the reply is lost on the way back to your phone, the app can recover it
+      without uploading the image again. They can be recovered for 24 hours and
+      are deleted automatically within two days.</li>
+  <li><strong>Revoking consent.</strong> You can turn group snap's image consent
+      off at any time from the app's Settings screen. Revoking stops future
+      uploads only: it does not recall an image already sent, and the records
+      described above are removed on the schedule above.</li>
+</ul>
+<p>As with every other mode, nothing is saved to your calendar or history until
+you have seen and confirmed what was found.</p>
 <p>The app has no storage permission and cannot browse your files. It only ever
 sees the single image you pick in the system photo picker, or the item you send
 to it from another app. The image and the text are held only while the card is
@@ -101,9 +149,13 @@ Google Cloud, in Singapore) stores a small amount of non-content data:</p>
       the subscription's validity period, and receives standard subscription
       status notifications from Google Play (renewed, cancelled, refunded) so
       Pro stays correct.</li>
+  <li><strong>Group snap results</strong> — only if you use group snap: the
+      events extracted from the image, kept so a lost reply can be recovered for
+      24 hours, and deleted within two days. The image itself is never stored.</li>
 </ul>
-<p>None of this contains anything you shared with the app. The text sent for
-Smart extraction is not stored, as described above.</p>
+<p>Apart from those group snap results, none of this contains anything you
+shared with the app. The text sent for Smart extraction is not stored, as
+described above.</p>
 
 <h2>What is stored on your phone</h2>
 <p>Everything the app remembers about your captures stays on the device:</p>
@@ -185,11 +237,18 @@ policies:</p>
   <li><strong>ML Kit text recognition</strong> — reads the words in an image, on
       the device. English is bundled in the app; the optional Chinese module is
       downloaded once by Google Play services and then also runs on the device.
-      Images are never uploaded.</li>
+      ML Kit never uploads images.</li>
   <li><strong>Google Gemini API</strong> — in Smart mode only, and only with
       your consent, Google processes the recognized text as our service provider
       to extract the event fields. Processed, not stored by us; handled by
       Google under its API terms.</li>
+  <li><strong>Anthropic Claude API</strong> — in group snap only, and only with
+      your separate image consent, Anthropic processes the selected image as our
+      service provider to extract the events. Not stored by us; Anthropic deletes
+      it within 30 days, or keeps it for up to 2 years if its safety systems flag
+      it. See
+      <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy
+      Policy</a>.</li>
   <li><strong>Google Cloud</strong> — runs our server (in Singapore) and stores
       the counters and verification records described above.</li>
   <li><strong>Google Play Billing</strong> — the Pro subscription.</li>
@@ -202,19 +261,25 @@ policies:</p>
       city or region level) from it. The app has no location permission and
       cannot read your actual location.</li>
 </ul>
-<p>All of the Google services above are operated by Google. See
+<p>All of the services above except the Anthropic Claude API are operated by
+Google. See
 <a href="https://policies.google.com/privacy">Google's Privacy Policy</a> for how
 Google handles this data.</p>
 
 <h2>Network use</h2>
 <p>Basic mode works with no connection at all. The app uses the network for
-Smart extraction (only with your consent), for the one-time download of the
+Smart extraction (only with your consent), for group snap (only with your
+separate image consent), for the one-time download of the
 optional Chinese recognition module, for verifying the Pro subscription, and
 for the crash reports and usage counts described above.</p>
 
 <h2>Data retention and deletion</h2>
-<p>We hold no copy of your screenshots, your text or your events. Text sent for
-Smart extraction is processed and discarded, not retained. What our server does
+<p>We hold no copy of your screenshots or your text. Text sent for Smart
+extraction is processed and discarded, not retained. An image sent for group
+snap is not kept by our server; Anthropic deletes it within 30 days, or keeps
+it for up to 2 years if its safety systems flag it. The events extracted by
+group snap are kept on our server for recovery for 24 hours and deleted within
+two days. What our server does
 retain — the installation identifier, its usage counters and the hashed
 subscription records — is kept only while it is needed to run the trial and
 Pro; if you want it deleted, email us the request from inside the app's report
@@ -228,7 +293,8 @@ collection.</p>
 
 <h2>Accuracy</h2>
 <p>The event details the app suggests are produced by software reading an image
-— and, in Smart mode, by an AI model reading the text — and they can be wrong.
+— and, in Smart mode, by an AI model reading the text, or in group snap, by an
+AI model reading the image — and they can be wrong.
 That is why the app always shows you an editable card and saves nothing until
 you confirm it. Every result screen has a report link that opens your own email
 app with a message already written; it contains no screenshot and nothing
