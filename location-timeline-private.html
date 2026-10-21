@@ -96,24 +96,39 @@ ongoing-recording notification and the system location indicator.</p>
 file on your phone and stores the result only on your phone. Nothing from the
 file is uploaded or sent to us or to anyone else.</p>
 <ul>
-  <li>You pick the file yourself with Android's system file picker. The app
-      gets read access to that one file only, adds no new permissions, and
-      does not keep a copy of the file.</li>
+  <li>The app reads the Timeline export from Android's Timeline settings
+      (<code>Timeline.json</code>) and older Google Takeout location history:
+      a Semantic Location History month file (for example
+      <code>2019_JANUARY.json</code>) or the Takeout <code>.zip</code>
+      archive. A <code>.zip</code> is read in memory, file by file; nothing
+      from it is unpacked to storage. Only Timeline files inside it are
+      imported. Every other file in the archive is read past and not
+      stored.</li>
+  <li>You choose the file yourself, either with Android's system file picker
+      or by sharing it to the app from another app (for example a Files
+      app). Either way the app gets read access to that one file only, adds
+      no new permissions, does not keep a copy of the file, and always shows
+      what it will do before it reads anything.</li>
+  <li>Older Google Takeout files carry no time zone, so the app asks which
+      time zone to show them in before importing. That choice is stored with
+      the imported entries on your phone.</li>
   <li>The imported places and journeys are stored in a separate database in
-      the app's private storage on your device, which is also excluded from
-      Android device backups.</li>
-  <li>Imported history is <strong>never deleted automatically</strong> — the
+      the app's private storage on your device. Where the export includes
+      them, this also holds place names and addresses. The database is
+      excluded from Android device backups.</li>
+  <li>Imported history is <strong>never deleted automatically</strong>. The
       90-day rule above applies only to days the app recorded itself. Without
       Pro, you can see a summary of the whole import, your most recent 7 days
       and up to three older sample days; with Pro, every imported day is
       open.</li>
   <li>You can delete one import, or all imported history, at any time in the
-      app's Settings, under Imported history. Deleting is always free.
+      app's Settings, under Imported history. Deleting one import also
+      deletes the place names it brought in. Deleting is always free.
       Uninstalling the app also deletes it permanently.</li>
   <li>The app's diagnostic log records at most one line per import, with
-      counts only (how many places and journeys were read or skipped, how
-      long it took and whether it finished) — never the file name, place
-      names, coordinates or dates.</li>
+      counts only: how many places and journeys were read or skipped, how
+      long it took and whether it finished. It never records the file name,
+      place names, addresses, coordinates or dates.</li>
 </ul>
 <p>The app is not affiliated with Google.</p>
 
