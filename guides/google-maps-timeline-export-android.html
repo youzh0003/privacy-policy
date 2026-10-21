@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Export and View Google Maps Timeline on Android</title>
+<meta name="description" content="Step-by-step: export your Google Maps Timeline from an Android phone (or iPhone), what the old Takeout Semantic Location History and Records.json files are, what cannot be recovered, and ways to view your history and exported files.">
+<link rel="canonical" href="https://youzh0003.github.io/privacy-policy/guides/google-maps-timeline-export-android.html">
+<style>
+  :root {
+    --bg: #fbfaf7; --fg: #1f1f1c; --muted: #5d5b55; --line: #dedbd2;
+    --accent: #1f5f8b; --note: #f1eee6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161615; --fg: #ecebe6; --muted: #a9a69d; --line: #3a3934;
+            --accent: #7fb5dc; --note: #23221f; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .5rem; }
+  h2 { font-size: 1.3rem; margin: 2.2rem 0 .6rem; padding-top: .6rem; border-top: 1px solid var(--line); }
+  h3 { font-size: 1.08rem; margin: 1.4rem 0 .4rem; }
+  a { color: var(--accent); }
+  .meta, .small { color: var(--muted); font-size: .92rem; }
+  .note { background: var(--note); border-left: 4px solid var(--accent); padding: .7rem 1rem; border-radius: 4px; margin: 1rem 0; }
+  ol li, ul li { margin: .3rem 0; }
+  code { font-size: .92em; background: var(--note); padding: 0 .25em; border-radius: 3px; }
+  nav ol { padding-left: 1.3rem; }
+  .table-wrap { overflow-x: auto; margin: 1rem 0; }
+  table { border-collapse: collapse; width: 100%; min-width: 36rem; font-size: .93rem; }
+  th, td { border: 1px solid var(--line); padding: .45rem .55rem; text-align: left; vertical-align: top; }
+  th { background: var(--note); }
+</style>
+</head>
+<body>
+<main>
+
+<h1>How to export and view your Google Maps Timeline on Android</h1>
+<p class="meta">Supported formats, free limits, and what cannot be recovered. Last updated October 21, 2026.</p>
+
+<p class="note"><strong>Disclosure:</strong> This guide is written by the developer of
+<em>My Location Timeline</em>, an Android app mentioned below. The steps and
+explanations are useful whether or not you ever install it. Neither the app nor
+this guide is affiliated with or endorsed by Google. Google Maps and Timeline
+are trademarks of Google LLC.</p>
+
+<nav aria-label="Contents">
+<p><strong>On this page</strong></p>
+<ol>
+  <li><a href="#why">Why Timeline is no longer on the web</a></li>
+  <li><a href="#android">Export Timeline on Android, step by step</a></li>
+  <li><a href="#iphone">Export Timeline on iPhone</a></li>
+  <li><a href="#takeout">Old Takeout files: Semantic Location History vs Records.json</a></li>
+  <li><a href="#lost">What cannot be recovered</a></li>
+  <li><a href="#view">Ways to view your history and exported files</a></li>
+  <li><a href="#sources">Sources</a></li>
+</ol>
+</nav>
+
+<h2 id="why">1. Why Timeline is no longer on the web</h2>
+<p>In December 2023 Google announced that "soon your Timeline will be saved
+right on your device", with optional cloud backups that Google says are
+automatically encrypted "so no one can read it, including Google"
+(<a href="https://blog.google/products/maps/updates-to-location-history-and-new-controls-coming-soon-to-maps/">Google Keyword blog, Dec 12, 2023</a>).
+The same announcement set auto-delete to three months by default when you
+first turn the setting on.</p>
+<p>Today Google's help pages say:</p>
+<ul>
+  <li>Timeline saves each device's locations <em>to that device</em>
+      (<a href="https://support.google.com/maps/answer/6258979">Manage your Google Maps Timeline</a>).</li>
+  <li>"Timeline is not available for Maps on your computer"
+      (<a href="https://support.google.com/maps/answer/14169818">Update Google Maps to use Timeline on your device</a>).</li>
+  <li>Backup is optional and stores an encrypted copy on Google's servers for
+      restoration to another device. To enable it, first turn off auto-delete.
+      Changes may take a few days to appear in the backup.</li>
+</ul>
+<p>In practice this means your history lives in the Maps app on your phone. If
+you want a copy you can keep, look at on a bigger screen, or open in another
+app, you need to <strong>export it as a file</strong>.</p>
+
+<h2 id="android">2. Export Timeline on Android, step by step</h2>
+<p>On Android the export is in your <strong>phone's Settings app</strong>, not
+inside Google Maps. According to
+<a href="https://support.google.com/maps/answer/6258979?co=GENIE.Platform%3DAndroid">Google's Android instructions</a>:</p>
+<ol>
+  <li>Open your phone's <strong>Settings</strong> app.</li>
+  <li>Tap <strong>Location</strong>, then <strong>Location services</strong>,
+      then <strong>Timeline</strong>.</li>
+  <li>Under "Timeline", tap <strong>Export Timeline data</strong>.</li>
+  <li>Tap <strong>Continue</strong>, choose where to save the file (for
+      example Downloads or a cloud drive folder), and tap
+      <strong>Save</strong>.</li>
+  <li>Wait for the "Export complete." message.</li>
+</ol>
+<p class="note"><strong>Menu names vary by phone.</strong> Samsung, Xiaomi,
+OPPO and other makers rename or regroup the Location menu. If you cannot find
+it, open Settings and search for <em>Timeline</em>.</p>
+<p>Google documents the Settings path above. Its Android help page does not
+specify the export filename. <a href="https://dawarich.app/docs/getting-started/import-existing-data/">Dawarich's import documentation</a> calls
+it <code>Timeline.json</code>; filenames alone should not be used to identify
+the format.</p>
+<p><strong>Tips:</strong></p>
+<ul>
+  <li>Export again from time to time. Each export is a snapshot and excludes
+      later activity. If auto-delete is enabled, older Timeline data continues
+      to be removed from your phone.</li>
+  <li>The file contains your precise location history. Treat it like a
+      private document: be careful about which apps and websites you open it
+      in, and about where you store copies.</li>
+</ul>
+
+<h2 id="iphone">3. Export Timeline on iPhone</h2>
+<p>On iPhone and iPad the export is inside the Google Maps app. Per
+<a href="https://support.google.com/maps/answer/6258979?co=GENIE.Platform%3DiOS">Google's iOS instructions</a>:
+open Google Maps, tap your profile picture or initial, then
+<strong>Settings</strong> → <strong>Location &amp; Privacy</strong> →
+<strong>Export Timeline data</strong>, and save the file with the share sheet
+(<strong>Save to Files</strong>). The file is saved as
+<code>location-history.json</code>.</p>
+<p class="small">The iPhone file uses a different layout from the Android
+file. My Location Timeline does not read iPhone exports yet.</p>
+
+<h2 id="takeout">4. Old Takeout files: Semantic Location History vs Records.json</h2>
+<p>Before the move to on-device storage, many people downloaded their
+Location History with Google Takeout. If you still have one of those archives
+(usually a <code>.zip</code>), it may hold two quite different kinds of
+data:</p>
+<ul>
+  <li><strong>Semantic Location History</strong>: <a href="https://dawarich.app/docs/getting-started/import-existing-data/">Dawarich's import
+      documentation</a> describes monthly JSON files in year folders, with
+      names such as <code>2013_APRIL.json</code>. My Location Timeline's
+      parser reads place visits and activity segments from this format.</li>
+  <li><strong>Records.json</strong>: A separate legacy location-data format
+      documented by <a href="https://dawarich.app/docs/getting-started/import-existing-data/">Dawarich</a>. My Location Timeline recognizes it
+      but does not currently import it.</li>
+</ul>
+<p>Keep the original archive even after you import it somewhere. A Takeout
+download is a one-time snapshot, and you may not be able to download the same
+data from Google again.</p>
+
+<h2 id="lost">5. What cannot be recovered</h2>
+<p>Be careful with anyone who promises to "recover" lost Timeline history.
+Google's help page says:</p>
+<ul>
+  <li>"When you delete Timeline data, it will be permanently deleted and can't
+      be recovered."</li>
+  <li>If enabled, auto-delete removes Timeline data older than your selected
+      period: 3, 18 or 36 months. You can also turn auto-delete off.</li>
+  <li>"If you factory reset your device or clear Google Play services data,
+      you'll delete Timeline data from your device." Without a backup there is
+      nothing to restore onto a new phone. Moving data to a different device
+      is only described for when backup was on.</li>
+</ul>
+<p>No viewer app can bring back data that is not in your phone's Timeline, in
+your Google backup, or in an export or Takeout file you already saved. If you
+have none of these, the history is gone.</p>
+
+<h2 id="view">6. Ways to view your history and exported files</h2>
+<p>The options below include viewing existing history in Google Maps and
+opening exported files with other tools. Offline availability, processing
+location and supported formats vary; check each tool's documentation.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Option</th><th>Where it runs</th><th>Formats</th><th>Cost</th><th>Good to know</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Google Maps app</strong></td>
+      <td>Your phone</td>
+      <td>Your own live Timeline (or a restored backup)</td>
+      <td>Free</td>
+      <td>Simplest if the data is still on the phone. Does not open export files from elsewhere.</td>
+    </tr>
+    <tr>
+      <td><strong>Browser-based viewers</strong></td>
+      <td>A web browser</td>
+      <td>Check the specific viewer's documented formats</td>
+      <td>Check the specific viewer's current pricing</td>
+      <td>Before opening your file, check whether processing stays on your
+          device, whether anything is uploaded, and which features require
+          internet access.</td>
+    </tr>
+    <tr>
+      <td><strong>Self-hosted server</strong> (for example
+          <a href="https://dawarich.app/">Dawarich</a>, open source)</td>
+      <td>A server you run yourself</td>
+      <td>Google Timeline and Takeout imports, plus ongoing tracking from companion apps</td>
+      <td>Free to self-host; a paid hosted version exists</td>
+      <td>Very flexible and you keep control, but you need to set up and maintain a server.</td>
+    </tr>
+    <tr>
+      <td><strong>My Location Timeline</strong> (by the author of this guide)</td>
+      <td>Your Android phone, offline</td>
+      <td>Android on-device Timeline JSON; older Takeout Semantic Location
+          History monthly JSON files, loose or inside the Takeout
+          <code>.zip</code>. <em>Not</em> iPhone exports, <em>not</em>
+          Records.json (for now)</td>
+      <td>Free tier; one-time Pro purchase</td>
+      <td>See details below.</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3>About My Location Timeline</h3>
+<p>I built <em>My Location Timeline</em> because I wanted to browse my exported
+history on the phone itself, without a computer and without uploading it to a
+website. It is a private, day-by-day location diary that can also record new
+days going forward, if you allow it (optional; it needs location
+permission).</p>
+<ul>
+  <li><strong>Formats:</strong> imports the Android on-device Timeline JSON and
+      older Google Takeout Semantic Location History monthly JSON files,
+      including those inside a Takeout <code>.zip</code>. iPhone exports and raw
+      <code>Records.json</code> files are not currently supported.</li>
+  <li><strong>Privacy:</strong> the file is read on your phone and your history
+      is never uploaded. No app account, no ads, no analytics. Recording,
+      importing and browsing work offline. Buying or restoring Pro uses Google
+      Play.</li>
+  <li><strong>Free:</strong> import supported files, see a summary of all
+      imported history, browse the most recent seven days (counted back from
+      today), and preview up to three automatically selected older imported
+      days. For an older archive this means most dates need Pro; the summary
+      and the sample days are free.</li>
+  <li><strong>Retention:</strong> imported history is not deleted
+      automatically; only you remove it. Free recordings are kept for 90
+      days.</li>
+  <li><strong>Pro:</strong> Pro is a one-time purchase, with the current local
+      price shown by Google Play. There is no subscription. It unlocks every retained
+      recorded and imported day, keeps your recorded history, and adds GPX/CSV
+      export of recorded days.</li>
+</ul>
+<p><a href="https://play.google.com/store/apps/details?id=com.yzy.locationtimelineprivate&amp;referrer=utm_source%3Dguide%26utm_medium%3Dweb%26utm_campaign%3Dtimeline_guide">Get My Location Timeline on Google Play</a>
+· <a href="../location-timeline-private.html">Privacy policy</a></p>
+<p class="small">If your file will not import, email
+<a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a> with the error
+message shown. Please do not attach the file itself; it contains your location
+history.</p>
+
+<h2 id="sources">Sources</h2>
+<ul class="small">
+  <li>Google Maps Help: <a href="https://support.google.com/maps/answer/6258979">Manage your Google Maps Timeline</a> (Android and iOS export steps, backups, deletion, auto-delete).</li>
+  <li>Google Maps Help: <a href="https://support.google.com/maps/answer/14169818">Update Google Maps to use Timeline on your device</a>.</li>
+  <li>Google Keyword blog: <a href="https://blog.google/products/maps/updates-to-location-history-and-new-controls-coming-soon-to-maps/">Updates to Location History and new controls coming soon to Maps</a> (Dec 12, 2023).</li>
+  <li><a href="https://dawarich.app/">Dawarich</a> project site (self-hosting and import options).</li>
+  <li>Dawarich docs: <a href="https://dawarich.app/docs/getting-started/import-existing-data/">Import existing data</a> (Timeline.json, Semantic Location History and Records.json).</li>
+</ul>
+<p class="small">Menu names and Google's policies change. If a step here no
+longer matches your phone, Google's help page is the authority. Corrections are
+welcome at <a href="mailto:yzyapps99@gmail.com">yzyapps99@gmail.com</a>.</p>
+
+</main>
+</body>
+</html>
