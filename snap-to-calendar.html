@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Snap to Calendar</title>
 <h1>Privacy Policy — Snap to Calendar</h1>
-<p>Last updated: October 17, 2026</p>
+<p>Last updated: October 21, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -33,19 +33,24 @@ provided by yzyy, an individual developer based in Singapore ("we", "us").</p>
       the one exception. Only if you choose it, and only after a separate
       consent just for images, the image you selected is sent to our server and
       to Anthropic's Claude AI to find every event in it. Our server does not
-      keep the image. Anthropic deletes it within 30 days, or keeps it for up to
-      2 years if its safety systems flag it. The events found are kept on our
-      server for up to two days so a lost reply can be recovered. See
+      keep the image. Anthropic says API inputs and outputs are normally deleted within 30 days;
+      exceptions include retention for policy enforcement or legal
+      requirements. The events found are kept on our server so a
+      lost reply can be recovered; they are marked for deletion after 24 hours; automatic deletion usually follows
+      within another 24 hours, but can take longer. See
       "Group snap" below.</li>
-  <li>The app has two extraction modes. <strong>Basic</strong> keeps everything
-      on the phone and works offline. <strong>Smart</strong>, if — and only if —
+  <li>The app has two extraction modes. <strong>Basic</strong> extracts events
+      on the phone and works offline (crash reports and usage counts, described
+      below, are separate and still sent). <strong>Smart</strong>, if — and only if —
       you switch it on, sends the recognized <em>text</em> to our server and to
       Google's Gemini AI service to work out the event fields. The app asks you
       plainly before the first time, and you can turn Smart off again at any
       time. Until you agree, no text leaves your phone.</li>
-  <li>Text sent for Smart extraction is <strong>processed, not stored</strong>:
-      neither we nor our server keep the text or the extracted event after the
-      answer is returned to your phone.</li>
+  <li>Our server <strong>does not store the text</strong> sent for Smart
+      extraction. It temporarily keeps the extracted event fields so a lost reply
+      can be recovered (marked for deletion after 24 hours; automatic deletion usually follows
+      within another 24 hours, but can take longer). Google's published Gemini API policy says prompts and responses are
+      retained for 55 days for abuse monitoring.</li>
   <li>The app has no account and no sign-in. We do not know who you are.</li>
   <li>The events and to-dos you save, and your history, are stored on your
       phone. We never receive them.</li>
@@ -71,17 +76,20 @@ uploads an image.</p>
 <ul>
   <li><strong>Basic mode (the default).</strong> The app finds explicit dates,
       times and places with its own built-in detection, entirely on the device.
-      Nothing leaves the phone. Basic is free, unlimited, and works with no
-      connection at all.</li>
+      No text or image leaves the phone for extraction. Basic is free,
+      unlimited, and works with no connection at all; crash reports and usage
+      counts are still sent when a connection is available.</li>
   <li><strong>Smart mode (only with your consent).</strong> The recognized text
       — only the text, never the image — is sent over an encrypted connection to
       our server, which passes it to Google's Gemini AI service (the Gemini API)
       to turn it into event fields: a title, a date, a time, a place. The result
-      comes back to your phone and fills in the card. The text and the extracted
-      event are processed and returned, not stored: our server keeps no copy of
-      either after the request completes, and our server's logs do not contain
-      them. Google processes the text as our service provider to produce the
-      answer. Smart mode requires an internet connection; when it is off, or the
+      comes back to your phone and fills in the card. Our server does not store
+      the text and does not write it, or the extracted event, to its logs. It
+      temporarily keeps the extracted event fields so a lost reply can be
+      recovered: they are marked for deletion after 24 hours; automatic deletion usually follows
+      within another 24 hours, but can take longer. Google processes the text as our service
+      provider to produce the answer; Google's published Gemini API policy says prompts and responses are
+      retained for 55 days for abuse monitoring. Smart mode requires an internet connection; when it is off, or the
       request fails, the app falls back to Basic on the phone.</li>
 </ul>
 <p>Smart mode is off until you turn it on. The app shows you a plain
@@ -110,15 +118,15 @@ and it works like this:</p>
   <li><strong>Our server keeps no image.</strong> Our server holds the image in
       memory only for the one request to Anthropic and then drops it. It is never
       written to our database, to file storage or to our logs.</li>
-  <li><strong>Anthropic's retention.</strong> Anthropic deletes the image, and
-      the result it returned, within 30 days. If its safety systems flag the
-      request, Anthropic may keep it for up to 2 years. We have no agreement
+  <li><strong>Anthropic's retention.</strong> Anthropic says API inputs and outputs are normally deleted within 30 days;
+      exceptions include retention for policy enforcement or legal
+      requirements. We have no agreement
       with Anthropic that shortens this.</li>
   <li><strong>The events found are cached briefly.</strong> The extracted events
       (their titles, dates, times and places) are kept on our server so that, if
       the reply is lost on the way back to your phone, the app can recover it
-      without uploading the image again. They can be recovered for 24 hours and
-      are deleted automatically within two days.</li>
+      without uploading the image again. They are marked for deletion after 24 hours; automatic deletion usually follows
+      within another 24 hours, but can take longer.</li>
   <li><strong>Revoking consent.</strong> You can turn group snap's image consent
       off at any time from the app's Settings screen. Revoking stops future
       uploads only: it does not recall an image already sent, and the records
@@ -140,8 +148,8 @@ Google Cloud, in Singapore) stores a small amount of non-content data:</p>
       first run. It identifies the installation, not you, and is not derived
       from your device or any account.</li>
   <li><strong>Usage counters</strong> tied to that identifier — how many Smart
-      extractions the installation has used (for the free trial) and a per-day
-      count (for a fair-use limit on Pro). Numbers only.</li>
+      extractions the installation has used (for the free trial) and per-day
+      counts for the daily limits. Numbers only.</li>
   <li><strong>Subscription verification records.</strong> When you buy Pro, the
       app sends the Google Play purchase token to our server so it can confirm
       the purchase with Google Play. The server stores only a keyed
@@ -149,13 +157,14 @@ Google Cloud, in Singapore) stores a small amount of non-content data:</p>
       the subscription's validity period, and receives standard subscription
       status notifications from Google Play (renewed, cancelled, refunded) so
       Pro stays correct.</li>
-  <li><strong>Group snap results</strong> — only if you use group snap: the
-      events extracted from the image, kept so a lost reply can be recovered for
-      24 hours, and deleted within two days. The image itself is never stored.</li>
+  <li><strong>Extracted event fields</strong> — from Smart and group snap
+      requests: the title, date, time and place found, kept so a lost reply can
+      be recovered. They are marked for deletion after 24 hours; automatic deletion usually follows
+      within another 24 hours, but can take longer. The image and the Smart text themselves are
+      never stored.</li>
 </ul>
-<p>Apart from those group snap results, none of this contains anything you
-shared with the app. The text sent for Smart extraction is not stored, as
-described above.</p>
+<p>Apart from those extracted event fields, none of this contains anything you
+shared with the app.</p>
 
 <h2>What is stored on your phone</h2>
 <p>Everything the app remembers about your captures stays on the device:</p>
@@ -220,8 +229,9 @@ sends.</p>
 <h2>Payments</h2>
 <p>The app is free to install. Basic mode is free and unlimited, and there is a
 one-time free trial of Smart extractions. The optional <strong>Pro
-subscription</strong> (monthly or yearly) unlocks unlimited Smart extraction and
-export; the exact price for your country is shown in the app before you pay.
+subscription</strong> (monthly or yearly) unlocks up to 30 successful Smart
+reads per installation per day (shared with group snap, with a separate limit of
+40 attempts; daily counters reset at midnight UTC) and export; the exact price for your country is shown in the app before you pay.
 It is sold through Google Play: Google processes the payment; we never receive
 or store your payment details, your card, your name or your billing address.
 What our server learns from Google Play is whether the subscription is valid
@@ -240,17 +250,19 @@ policies:</p>
       ML Kit never uploads images.</li>
   <li><strong>Google Gemini API</strong> — in Smart mode only, and only with
       your consent, Google processes the recognized text as our service provider
-      to extract the event fields. Processed, not stored by us; handled by
-      Google under its API terms.</li>
+      to extract the event fields. The text is not stored by us; Google's published Gemini API policy says prompts and responses are
+      retained for 55 days for abuse monitoring. See
+      <a href="https://ai.google.dev/gemini-api/terms">the Gemini API terms</a>.</li>
   <li><strong>Anthropic Claude API</strong> — in group snap only, and only with
       your separate image consent, Anthropic processes the selected image as our
-      service provider to extract the events. Not stored by us; Anthropic deletes
-      it within 30 days, or keeps it for up to 2 years if its safety systems flag
-      it. See
+      service provider to extract the events. Not stored by us; Anthropic says API inputs and outputs are normally deleted within 30 days;
+      exceptions include retention for policy enforcement or legal
+      requirements. See
       <a href="https://www.anthropic.com/legal/privacy">Anthropic's Privacy
       Policy</a>.</li>
   <li><strong>Google Cloud</strong> — runs our server (in Singapore) and stores
-      the counters and verification records described above.</li>
+      the counters, verification records and temporary event fields described
+      above.</li>
   <li><strong>Google Play Billing</strong> — the Pro subscription.</li>
   <li><strong>Firebase Crashlytics</strong> — crash reports (stack traces, device
       state at the time of a crash).</li>
@@ -275,11 +287,14 @@ for the crash reports and usage counts described above.</p>
 
 <h2>Data retention and deletion</h2>
 <p>We hold no copy of your screenshots or your text. Text sent for Smart
-extraction is processed and discarded, not retained. An image sent for group
-snap is not kept by our server; Anthropic deletes it within 30 days, or keeps
-it for up to 2 years if its safety systems flag it. The events extracted by
-group snap are kept on our server for recovery for 24 hours and deleted within
-two days. What our server does
+extraction is not stored by our server; Google's published Gemini API policy
+says prompts and responses are retained for 55 days for abuse monitoring. An
+image sent for group snap is not kept by our server; Anthropic says API inputs
+and outputs are normally deleted within 30 days, with exceptions for policy
+enforcement or legal requirements. Event fields extracted by Smart or group
+snap are kept on our server for reply recovery: they are marked for deletion
+after 24 hours, and automatic deletion usually follows within another 24 hours
+but can take longer. What our server does
 retain — the installation identifier, its usage counters and the hashed
 subscription records — is kept only while it is needed to run the trial and
 Pro; if you want it deleted, email us the request from inside the app's report
