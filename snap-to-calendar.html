@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Snap to Calendar</title>
 <h1>Privacy Policy — Snap to Calendar</h1>
-<p>Last updated: November 2, 2026</p>
+<p>Last updated: November 9, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -18,8 +18,9 @@ developer, as listed on Google Play:</p>
 </ul>
 
 <p>Snap to Calendar ("the app") reads a screenshot, photo or piece of text that
-you share with it, works out the event it describes, and shows you a card you
-confirm before it is saved to your calendar or kept as a to-do. This page
+you share with it, works out the events it describes, and lets you review them before saving:
+confirm an editable card, or review the ticked events in a multi-event list and
+tap Send. Nothing is saved to your calendar or kept as a to-do before that. This page
 explains what data the app handles and who it is shared with. The app is
 provided by yzyy, an individual developer based in Singapore ("we", "us").</p>
 
@@ -52,11 +53,13 @@ provided by yzyy, an individual developer based in Singapore ("we", "us").</p>
       within another 24 hours, but can take longer). Google's published Gemini API policy says prompts and responses are
       retained for 55 days for abuse monitoring.</li>
   <li>The app has no account and no sign-in. We do not know who you are.</li>
-  <li>The events and to-dos you save, and your history, are stored on your
-      phone. We never receive them.</li>
-  <li>The app does not read your calendar. When you tap "Add to calendar" it
-      hands the event to the calendar app you already use, and that app decides
-      what to do with it.</li>
+  <li>Your saved history and to-dos are stored on your phone. We do not receive
+      a copy of your history or of what you save to your calendar.</li>
+  <li>If you allow calendar access, the app reads the names of your calendars
+      (and the account each belongs to) so you can choose one, and writes the
+      events you confirm into it. It does not read the events already in your
+      calendar. If you don't allow access, the app passes the event to a calendar
+      app on your phone for you to save there.</li>
   <li>There are no ads, and the app does not collect an advertising ID.</li>
   <li>The app sends crash reports and a small, fixed set of usage counts so it
       can be fixed and improved. These carry no screenshot, no photo, no text you
@@ -136,9 +139,9 @@ and it works like this:</p>
 you have seen and confirmed what was found.</p>
 <p>The app has no storage permission and cannot browse your files. It only ever
 sees the single image you pick in the system photo picker, or the item you send
-to it from another app. The image and the text are held only while the card is
-being prepared, and are discarded when you save or discard the card. The app
-never keeps a copy of the screenshot.</p>
+to it from another app. The app may temporarily store the image or text on your
+phone to process a capture or recover interrupted work. These temporary files are
+removed as pending work is cleared or expired captures are cleaned up.</p>
 
 <h2>What our server stores</h2>
 <p>To count the free trial and verify Pro without an account, our server (run on
@@ -172,7 +175,9 @@ shared with the app.</p>
   <li><strong>Your history</strong> — the title, date, time and place of each
       event or to-do you saved, and whether a to-do is done.</li>
   <li><strong>Your settings and choices</strong> — the Smart/Basic choice, the
-      OCR language choice, and the trial count shown in the app.</li>
+      OCR language choice, the trial count shown in the app, and, if you allow
+      calendar access, which calendar you chose (its name and the account it
+      belongs to).</li>
   <li><strong>Your Pro status</strong> — whether this installation currently has
       Pro.</li>
 </ul>
@@ -186,16 +191,31 @@ Smart consent again, and restores Pro from your Google Play account rather than
 from a backup.</p>
 
 <h2>Your calendar</h2>
-<p>The app does not ask for calendar permission and cannot read, change or see
-your calendar. When you tap "Add to calendar", Android opens your own calendar
-app with the fields already filled in, and you save it there. If you tap "Save as
-to-do" instead, nothing goes to a calendar at all — the item is kept inside this
-app, on this phone.</p>
+<p>If you allow calendar access, the app reads the names of the calendars on your
+phone and the account each belongs to, shows you the ones it can write to so you
+can choose one, and remembers your choice on this phone. It writes events into
+that calendar when you confirm an editable card or review the ticked rows in a
+multi-event list and tap Send. For a timed event saved this way it also tries to add a
+reminder 30 minutes before the start; all-day events get no reminder. The app does
+not read the events already in your calendar.</p>
+<p>Calendar access and saving do not send your calendar names, account details,
+event contents or event IDs to us. The usage reporting described below records
+actions, counts and outcomes, such as whether you allowed access and whether a
+save worked, without those calendar details. If the
+calendar you choose belongs to an online account, that calendar service may sync
+the saved events under its own settings and privacy policy.</p>
+<p>If you don't allow calendar access, or saving directly isn't possible, the app
+passes the event to a calendar app on your phone with the fields already filled
+in, and you save it there. If no calendar app can take it, the event is kept as a
+to-do instead. If you tap "Save as to-do", nothing goes to a calendar at all — the
+item is kept inside this app, on this phone.</p>
 
 <h2>Reminders and notifications</h2>
 <p>If you save something as a to-do, the app can post a reminder notification.
 Android asks for your permission at that moment, and not before. Reminders are
-scheduled and delivered entirely on the device.</p>
+scheduled and delivered entirely on the device. If the app successfully adds a 30-minute
+reminder when saving a timed event directly, your calendar app or service handles
+that reminder according to its own settings.</p>
 
 <h2>Crash reports and usage counts</h2>
 <p>The app sends:</p>
@@ -206,8 +226,15 @@ scheduled and delivered entirely on the device.</p>
       capture started and from which entry point, that extraction finished and
       whether anything was found, which extraction mode ran and why a fallback
       happened, the Smart/Basic consent choice as a yes/no, that something was
-      saved to a calendar or as a to-do, that the trial ran out, and that the
-      subscription screen was shown or a purchase started. Every value is a
+      saved to a calendar or as a to-do, whether you allowed calendar access,
+      whether a direct save worked or fell back to your calendar app, your answer
+      when the app asks if the event reached your calendar, the sizes of
+      multi-event lists and their confirmed or submitted selections (reported as
+      ranges), whether you ticked or unticked a row or acknowledged a warning,
+      whether extraction results were truncated, that the
+      trial ran out, and that the subscription screen was shown or a purchase
+      started. None of these include a calendar name, an account name or event
+      contents. Every value is a
       number, a yes/no, or a label from a fixed list. The app provides no way
       for the text you shared, an image, an event title, a date or a place to be
       recorded in these.</li>
@@ -299,8 +326,9 @@ retain — the installation identifier, its usage counters and the hashed
 subscription records — is kept only while it is needed to run the trial and
 Pro; if you want it deleted, email us the request from inside the app's report
 link and we will remove the records for your installation identifier.
-Everything stored on the phone is removed when you delete an entry or uninstall
-the app.</p>
+Deleting an entry removes it from the app's history on the phone, and uninstalling
+the app removes everything the app stored on the phone. Events already saved to
+your calendar stay there until you delete them in your calendar app.</p>
 <p>Data collected by the Google services above is retained under Google's
 retention policies: usage data for a limited period, and crash reports only as
 long as they are useful for fixing problems. Uninstalling the app stops all
@@ -310,8 +338,9 @@ collection.</p>
 <p>The event details the app suggests are produced by software reading an image
 — and, in Smart mode, by an AI model reading the text, or in group snap, by an
 AI model reading the image — and they can be wrong.
-That is why the app always shows you an editable card and saves nothing until
-you confirm it. Every result screen has a report link that opens your own email
+That is why the app lets you review an editable card or a multi-event list, and
+saves nothing until you confirm the card or review the ticked events and tap
+Send. Every result screen has a report link that opens your own email
 app with a message already written; it contains no screenshot and nothing
 quoted from what you shared, and it is not sent until you send it.</p>
 
