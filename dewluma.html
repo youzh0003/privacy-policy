@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Dewluma: Glow Pet &amp; Habits</title>
 <h1>Privacy Policy — Dewluma: Glow Pet &amp; Habits (being renamed Dewluma: Habit Tracker Pet)</h1>
-<p>Effective date: October 18, 2026</p>
+<p>Effective date: November 23, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -53,6 +53,8 @@ does not delete. The app is provided by yzyy, an individual developer based in S
   <li>The app may download new postcard stories as static files from our content host,
       Cloudflare (see <a href="#stories">Story downloads</a>).</li>
   <li>Optional decor packs are one-time purchases through Google Play Billing.</li>
+  <li>The app may ask Google Play to show its rating card; it never learns what you rate (see
+      <a href="#rating">Rating the app</a>).</li>
   <li>No ads, no advertising ID, no accounts, no sign-in.</li>
 </ul>
 
@@ -109,7 +111,7 @@ log exports or web analytics for the content host. Cloudflare's own handling is 
 Habit and check-in completions are sent only as a count for each day, the next day you open the
 app, not when you complete them (apart from a one-time setup step during onboarding). Like any app
 analytics, they do show when the app is in use.</p>
-<p>The app sends only these 16 events. Each one carries at most the fixed values listed; there is
+<p>The app sends only these 18 events. Each one carries at most the fixed values listed; there is
 no free text:</p>
 <ul>
   <li><code>app_open</code> (no values)</li>
@@ -136,6 +138,9 @@ no free text:</p>
       brave, dreamy)</li>
   <li><code>content_pack_result</code>: content pack result (installed, network, signature,
       checksum, too_large, archive, schema, text, image, storage)</li>
+  <li><code>review_asked</code> (no values; sent with the next day's batch, see
+      <a href="#rating">Rating the app</a>)</li>
+  <li><code>rate_app_tapped</code> (no values)</li>
 </ul>
 <p>The app also sets one user property, <code>install_source</code>, to "play" or "other"
 (whether the app was installed from Google Play).</p>
@@ -160,6 +165,23 @@ separate file that is not backed up, to know which decor packs you own. Purchase
 Google account and can be restored after reinstalling. Purchases are kept by Google Play, and you
 can restore them in Settings at any time. We never receive your card number, billing address or
 any other payment detail.</p>
+
+<h2 id="rating">Rating the app (Google Play In-App Review)</h2>
+<p>After a check-in that completes all of a day's habits, the app may ask Google Play to show its
+rating card, at most once every 60 days, only from the third completed day on, only once the app
+has been installed for at least three days, and only when the app was installed from Google Play.
+Google Play decides whether the card actually appears. The card is shown by Google Play, and any
+rating or review you post in it goes to Google Play under your Google account and is handled under
+the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The app is never told
+whether you rated it, what rating you gave or what you wrote. As with any Google Play review, a
+review you post is shown publicly on Google Play, and the developer can read it and reply there.
+<em>Rate Dewluma</em> in Settings
+simply opens the app's Google Play page. The app records a usage event when the card is requested
+(<code>review_asked</code>, sent with the next day's batch rather than at that moment) and when
+<em>Rate Dewluma</em> is tapped (<code>rate_app_tapped</code>), with no other details. To keep to
+these limits, the app stores on your device only how many completed days it has counted, the date
+of the last one it counted, and when it last asked; this record is not backed up, and <em>Delete all data</em> does not reset it, so a reset
+does not bring the card back sooner.</p>
 
 <h2 id="delete">Deleting your data</h2>
 <p><em>Delete all data</em> (Settings) removes your pet, habits, history, postcards, settings and
@@ -196,6 +218,8 @@ Families programme. It does not knowingly collect personal information from chil
 <h2>Who the data is shared with</h2>
 <p>We do not sell data and do not share it with anyone for their own use. Google processes the
 Analytics and Crashlytics data, and Google Play the purchases, on our behalf as described above;
+a rating or review you post in Google Play's rating card goes to Google Play, which handles it under
+its own terms and shows a review publicly, as described under <a href="#rating">Rating the app</a>;
 Cloudflare may deliver the story files.</p>
 
 <h2>Changes and contact</h2>

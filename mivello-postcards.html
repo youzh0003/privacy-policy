@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Mivello Postcards</title>
 <h1>Privacy Policy — Mivello Postcards</h1>
-<p>Last updated: October 3, 2026</p>
+<p>Last updated: November 23, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -73,7 +73,9 @@ never sent to us:</p>
   <li><strong>The trip in progress</strong> — what you packed and when it is due
       home.</li>
   <li><strong>Your settings</strong> — the language, whether the pet may knock
-      when it comes home, your quiet hours, and your two privacy switches.</li>
+      when it comes home, your quiet hours, and your two privacy switches, plus
+      the time the app last asked Google Play to show its rating card (see
+      <a href="#rating">Rating the app</a>).</li>
   <li><strong>Your one-time unlock</strong>, if you bought it — recorded as a
       simple yes or no, and re-checked with Google Play.</li>
 </ul>
@@ -83,7 +85,7 @@ it contains album records only — not the pictures, not your settings and not a
 purchase.</p>
 
 <h2>What the app collects and sends</h2>
-<p>Two Google services run inside the app. Both are on when you first install it,
+<p>Two Google reporting services run inside the app. Both are on when you first install it,
 both are described on the "Before you start" card the app shows on its very
 first run, and either can be turned off at any time in <strong>Settings → What is
 collected</strong>.</p>
@@ -102,8 +104,12 @@ parts people actually reach:</p>
   <li>how long the first screen was open and whether you touched the animal on
       it — as coarse ranges, never a time of day and never an exact count;</li>
   <li>which of the app's own screens you reached;</li>
-  <li>how you say you heard about the app, if you answer that optional
-      question;</li>
+  <li>that the app asked Google Play to show its rating card
+      (<code>REVIEW_ASKED</code>, with no details at all; see
+      <a href="#rating">Rating the app</a>);</li>
+  <li>how you heard about the app, as one label from a short fixed list: taken
+      from the Google Play link the app was installed from, or from your answer
+      if you answer that optional question;</li>
   <li>plus the events Google Analytics collects automatically —
       <code>first_open</code>, <code>session_start</code>,
       <code>user_engagement</code>, <code>screen_view</code>,
@@ -176,6 +182,21 @@ purposes. Turning off usage analytics in <strong>Settings → What is collected<
 stops it. Our event is not recorded again when the unlock is restored on a
 reinstall or on another phone.</p>
 
+<h2 id="rating">Rating the app (Google Play In-App Review)</h2>
+<p>After you keep a postcard, the app may ask Google Play to show its rating
+card, at most once every 60 days, and only once the app has been installed for
+at least two days and you have kept at least two postcards. Google Play decides
+whether the card actually appears. The card is shown by Google Play, and any
+rating or review you post in it goes to Google Play under your Google account and
+is handled under the <a href="https://policies.google.com/privacy">Google Privacy
+Policy</a>. The app is never told whether you rated it, what rating you gave or
+what you wrote. As with any Google Play review, a review you post is shown
+publicly on Google Play, and we can read it and reply there. To keep to the 60
+days, the app adds one thing to your settings: the time it last asked. When it
+asks, usage analytics records one event,
+<code>REVIEW_ASKED</code>, with no other details, and only while usage analytics
+is switched on.</p>
+
 <h2>Advertising</h2>
 <p>The app contains no advertising, no advertising SDK and no ad network. It does
 not collect an advertising ID: the <code>AD_ID</code> permission and both Privacy
@@ -184,21 +205,28 @@ the analytics library is configured not to attach an advertising ID to anything
 it sends.</p>
 
 <h2>Who the data is shared with</h2>
-<p>The only recipients are the Google services the app is built on, which process
-the data described above on our behalf and under their own privacy policies:</p>
+<p>The only recipients are the Google services the app is built on. The first two
+process the data described above on our behalf; Google Play handles purchases and
+reviews under its own terms. All of them are covered by their own privacy policies:</p>
 <ul>
   <li><strong>Google Analytics for Firebase</strong> — the usage events, device
       and diagnostic information, the IP-derived approximate region, and, if you
       buy Mivello Plus, the purchase analytics described above.</li>
   <li><strong>Firebase Crashlytics</strong> — crash reports.</li>
   <li><strong>Google Play Billing</strong> — the one-time purchase.</li>
+  <li><strong>Google Play In-App Review</strong> — the rating card, and any
+      rating or review you choose to post in it (see
+      <a href="#rating">Rating the app</a>).</li>
 </ul>
 <p>Google's handling of this data is governed by the
 <a href="https://firebase.google.com/support/privacy">Firebase privacy
 documentation</a> and the
 <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
-There is no other third-party SDK in the app, no server of our own, and no
-analytics, attribution, advertising or social network beyond the three above.
+The app also uses Google's Play Install Referrer library, on your phone only, to
+read which Google Play link the app was installed from; only the
+"how you heard about the app" label above is kept from it. There is no other third-party SDK in
+the app, no server of our own, and no analytics, attribution, advertising or
+social network beyond these.
 <strong>We do not sell your data and we do not share it with anyone for their own
 purposes or for advertising.</strong></p>
 
@@ -210,8 +238,8 @@ purposes or for advertising.</strong></p>
   <li><strong>Uninstall:</strong> uninstalling the app stops all collection and
       deletes everything the app stored on your phone, including your album.</li>
   <li><strong>There is no account</strong>, so there is nothing for us to look up
-      and nothing for you to log into. Because what is sent is tied only to a
-      Google-generated installation identifier, we have no way to find "your"
+      and nothing for you to log into. Because what analytics and crash reports
+      send is tied only to a Google-generated installation identifier, we have no way to find "your"
       records — and no way to connect them to you. Crash reports are retained by
       Crashlytics for up to 90 days; Analytics data is retained for the period
       configured in Firebase and is deleted after that.</li>
@@ -245,7 +273,7 @@ the app.</p>
 <hr>
 
 <h1 id="zh-hant">隱私權政策 —— Mivello 風寄小箋</h1>
-<p>最後更新：2026 年 10 月 3 日</p>
+<p>最後更新：2026 年 11 月 23 日</p>
 
 <h2>本政策涵蓋哪一個 app、哪一位開發者</h2>
 <p>本隱私權政策適用於以下這一個 Android 應用程式，以及它在 Google Play 上的開發者：</p>
@@ -298,7 +326,8 @@ the app.</p>
   <li><strong>你的旅程</strong> —— 已經走完的行程，以及路上寄回來的那些片刻。</li>
   <li><strong>正在進行的那一程</strong> —— 你帶了什麼、大概什麼時候回來。</li>
   <li><strong>你的設定</strong> —— 語言、回家時要不要敲門、你的安靜時段，
-      以及那兩個隱私開關。</li>
+      以及那兩個隱私開關；另外還有本 app 上一次請 Google Play 顯示評分卡的時間
+      （見<a href="#zh-hant-rating">為本 app 評分</a>）。</li>
   <li><strong>你的一次性解鎖</strong>（若你買了）—— 只記成「有」或「沒有」，
       並向 Google Play 重新查核。</li>
 </ul>
@@ -306,7 +335,7 @@ the app.</p>
 那個檔案是你的，我們看不到，而且裡面只有相簿紀錄 —— 不含圖片、不含設定，也不含購買。</p>
 
 <h2>本 app 會蒐集並送出什麼</h2>
-<p>app 裡跑著兩個 Google 服務。剛安裝時兩者都是開啟的，兩者都寫在第一次啟動時的
+<p>app 裡跑著兩個 Google 回報服務。剛安裝時兩者都是開啟的，兩者都寫在第一次啟動時的
 「開始之前」說明卡上，而且隨時可以在<strong>「設定 → 會蒐集什麼」</strong>裡關掉。</p>
 
 <h3>使用分析（Google Analytics for Firebase）</h3>
@@ -321,7 +350,10 @@ the app.</p>
   <li>第一個畫面開著多久、你有沒有摸那隻動物 —— 以粗略的區間記錄，
       不記時間點，也不記次數；</li>
   <li>你走到了 app 的哪些畫面；</li>
-  <li>如果你回答了那個選填的問題，你說你是從哪裡聽說這個 app 的；</li>
+  <li>本 app 向 Google Play 請求顯示評分卡（<code>REVIEW_ASKED</code>，不帶任何細節；
+      見<a href="#zh-hant-rating">為本 app 評分</a>）；</li>
+  <li>你是從哪裡聽說這個 app 的，記成一份簡短固定清單裡的一個標籤：取自安裝時使用的
+      Google Play 連結，或取自你對那個選填問題的回答；</li>
   <li>以及 Google Analytics 自動蒐集的事件 —— <code>first_open</code>、
       <code>session_start</code>、<code>user_engagement</code>、
       <code>screen_view</code>、<code>app_update</code>、<code>os_update</code>、
@@ -377,25 +409,40 @@ Google Analytics for Firebase 可能會記下兩樣東西：我們自己的事�
 Google 代我們處理這些購買紀錄，只用來了解 app 的使用情況。我們不會為了廣告或他人自己的用途而分享這些資料。在<strong>「設定 → 會蒐集什麼」</strong>
 關掉使用分析即停止。重新安裝或換手機還原解鎖時，我們的事件不會再記一次。</p>
 
+<h2 id="zh-hant-rating">為本 app 評分（Google Play 應用程式內評論）</h2>
+<p>你收下一張明信片之後，本 app 可能會請 Google Play 顯示它的評分卡；每 60 天最多一次，
+而且要等本 app 安裝滿兩天、你也已經收下至少兩張明信片才會發生。評分卡實際會不會出現，
+由 Google Play 決定。評分卡由 Google Play 顯示，你在裡面留下的評分或評論會以你的
+Google 帳號送到 Google Play，並適用
+<a href="https://policies.google.com/privacy">Google 隱私權政策</a>。
+本 app 永遠不會得知你有沒有評分、給了幾顆星或寫了什麼。和所有 Google Play 評論一樣，
+你留下的評論會公開顯示在 Google Play 上，我們也能在那裡閱讀並回覆。為了遵守 60 天的間隔，
+本 app 只在你的設定裡多記一項：上一次詢問的時間。每次詢問時，使用分析會記下一個事件
+<code>REVIEW_ASKED</code>，不帶其他任何細節，而且只在使用分析開著時才會記錄。</p>
+
 <h2>廣告</h2>
 <p>本 app 沒有廣告、沒有廣告 SDK、也沒有任何廣告聯播網。它不蒐集廣告 ID：
 <code>AD_ID</code> 權限與兩個 Privacy Sandbox 廣告權限都已明確從安裝檔中移除，
 分析程式庫也設定成不在送出的任何內容上附加廣告 ID。</p>
 
 <h2>資料會交給誰</h2>
-<p>唯一的接收方是本 app 所依賴的 Google 服務，它們代我們處理上述資料，
-並適用它們自己的隱私權政策：</p>
+<p>唯一的接收方是本 app 所依賴的 Google 服務。前兩項代我們處理上述資料；
+購買與評論則由 Google Play 依它自己的條款處理。它們都適用各自的隱私權政策：</p>
 <ul>
   <li><strong>Google Analytics for Firebase</strong> —— 上述使用事件、裝置與診斷資訊、
       由 IP 推得的概略地區，以及（若你購買 Mivello Plus）上述的購買分析。</li>
   <li><strong>Firebase Crashlytics</strong> —— 當機報告。</li>
   <li><strong>Google Play Billing</strong> —— 那一項一次性購買。</li>
+  <li><strong>Google Play 應用程式內評論</strong> —— 評分卡，以及你選擇在裡面留下的評分或評論
+      （見<a href="#zh-hant-rating">為本 app 評分</a>）。</li>
 </ul>
 <p>Google 對這些資料的處理適用
 <a href="https://firebase.google.com/support/privacy">Firebase 隱私權說明</a>與
 <a href="https://policies.google.com/privacy">Google 隱私權政策</a>。
-app 裡沒有其他第三方 SDK，我們沒有自己的伺服器，
-也沒有上述三者以外的任何分析、歸因、廣告或社群服務。
+本 app 另外使用 Google 的 Play Install Referrer 程式庫，只在你的手機上讀取
+本 app 是從哪一個 Google Play 連結安裝的，從中只留下上面「從哪裡聽說這個 app」的標籤。
+除此之外，app 裡沒有其他第三方 SDK，我們沒有自己的伺服器，
+也沒有上述這些以外的任何分析、歸因、廣告或社群服務。
 <strong>我們不販售你的資料，也不會為了他人自己的用途或廣告而分享出去。</strong></p>
 
 <h2>保留與刪除</h2>
@@ -405,7 +452,7 @@ app 裡沒有其他第三方 SDK，我們沒有自己的伺服器，
   <li><strong>解除安裝：</strong>解除安裝會停止全部蒐集，並刪除 app 存在你手機上的
       所有東西，包含你的相簿。</li>
   <li><strong>沒有帳號</strong>，所以我們沒有東西可查，你也沒有地方可登入。
-      由於送出的內容只綁在 Google 產生的安裝識別碼上，我們沒有辦法找出「你的」紀錄，
+      由於使用分析與當機報告送出的內容只綁在 Google 產生的安裝識別碼上，我們沒有辦法找出「你的」紀錄，
       也沒有辦法把它們連到你身上。當機報告在 Crashlytics 最多保留 90 天；
       分析資料依 Firebase 設定的期間保留，到期後刪除。</li>
   <li>如果你想停止蒐集又不想解除安裝，上面那兩個開關做的正是這件事。
