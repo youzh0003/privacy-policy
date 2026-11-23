@@ -1,5 +1,5 @@
 <h1>Privacy Policy — My Location Timeline &amp; History (formerly My Location Timeline)</h1>
-<p>Last updated: November 2, 2026</p>
+<p>Last updated: November 24, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -36,9 +36,11 @@ an individual developer based in Singapore ("we", "us").</p>
       whenever it is running.</li>
   <li>No account, no cloud, no ads, no analytics, no crash-reporting
       software.</li>
-  <li>The only network-capable component in the app is Google Play's billing
-      service, used solely for the one-time Pro purchase. Your location data
-      never travels over the network.</li>
+  <li>The only network-capable components in the app are two Google Play
+      services: Google Play Billing, used solely for the one-time Pro
+      purchase, and Google Play In-App Review, which can show Google Play's
+      rating card. The app sends neither of them anything about your
+      timeline. Your location data never travels over the network.</li>
 </ul>
 
 <h2>Location data</h2>
@@ -145,8 +147,10 @@ how you store or share that file is up to you.</p>
 <h2>Network use</h2>
 <p>The app makes no network requests of its own. Its manifest carries the
 network permission only because the Google Play billing component described
-below requires it. Your location data is never sent over any network
-connection.</p>
+below requires it. Google Play In-App Review added no permission: the app
+asks the Google Play Store app on your phone to show its rating card, and if
+you post a rating or review, Google Play sends it, not the app. Your location
+data is never sent over any network connection.</p>
 
 <h2>Purchases</h2>
 <p>The one-time Timeline Pro unlock is sold through Google Play. Google
@@ -162,12 +166,29 @@ any kind from the app. Your device's own system-level reporting to Google
 and governed by your device settings and Google's privacy policy.</p>
 
 <h2>Third-party services</h2>
-<p>The app includes exactly one third-party service:</p>
+<p>The app includes exactly two third-party services, both from Google
+Play:</p>
 <ul>
   <li><strong>Google Play Billing</strong> — handles the one-time Pro
       purchase. Data involved in the purchase is processed by Google Play
       under <a href="https://policies.google.com/privacy">Google's Privacy
       Policy</a>.</li>
+  <li><strong>Google Play In-App Review</strong> — after you have used the
+      app on a few different days and the install is at least a week old, the
+      app may ask Google Play to show its rating card when you leave a
+      successful import result or open a past day with a recorded stop or
+      journey, at most once every 60 days; Google Play decides whether the
+      card actually appears. The card is shown by Google Play, and any rating
+      or review you post in it goes to Google Play under your Google account
+      and is handled under
+      <a href="https://policies.google.com/privacy">Google's Privacy
+      Policy</a>. The app sends nothing about your timeline with the request
+      and is never told whether you rated it, what rating you gave or what
+      you wrote. "Rate this app" in Settings simply opens the app's Google
+      Play page. The app's on-device diagnostic log records one line when the
+      card is requested, with counts only (how many times and on how many
+      days the app has been opened). That log stays on your phone unless you
+      save it to a file yourself from Settings.</li>
 </ul>
 <p>There are no other SDKs, no analytics services, and no data-sharing
 partners.</p>
