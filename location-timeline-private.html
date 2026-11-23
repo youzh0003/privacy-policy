@@ -25,10 +25,11 @@ an individual developer based in Singapore ("we", "us").</p>
 
 <h2>Summary</h2>
 <ul>
-  <li>Your location history is stored <strong>only on your phone</strong>. It
-      is never uploaded, never sent to us, and never shared with anyone. We do
-      not operate any servers and could not read your timeline even if we
-      wanted to.</li>
+  <li>Your location history is stored <strong>on your phone</strong>. The app
+      does not automatically upload your timeline or include it in billing
+      or review requests; files you choose to export may be transferred by
+      your selected storage or sharing service. We do not operate any servers
+      or receive your timeline from the app.</li>
   <li>The app records location <strong>in the background, including when the
       app is closed</strong> — that is its purpose, and it tells you so in a
       notice before it ever asks for location permission. Recording only runs
@@ -36,11 +37,9 @@ an individual developer based in Singapore ("we", "us").</p>
       whenever it is running.</li>
   <li>No account, no cloud, no ads, no analytics, no crash-reporting
       software.</li>
-  <li>The only network-capable components in the app are two Google Play
-      services: Google Play Billing, used solely for the one-time Pro
-      purchase, and Google Play In-App Review, which can show Google Play's
-      rating card. The app sends neither of them anything about your
-      timeline. Your location data never travels over the network.</li>
+  <li>The app uses Google Play Billing for the one-time Pro purchase and
+      ownership checks, Google Play In-App Review for optional ratings, and
+      Google Play services for location and activity recognition.</li>
 </ul>
 
 <h2>Location data</h2>
@@ -49,9 +48,10 @@ location and, through Android's activity-recognition service, the kind of
 movement detected (such as walking or driving — used to tell journeys apart
 from stops). From this it builds journeys, visited places, and daily routes.</p>
 <p>All of it is written to a database in the app's private storage on your
-phone. It is never transmitted anywhere — not to us, not to any third party.
-The app contains no code that sends location data over a network, and its
-recording engine runs entirely on the device.</p>
+phone. The app does not automatically upload your timeline or include it in
+billing or review requests. Files you choose to export may be transferred by
+your selected storage or sharing service. The recording engine runs entirely
+on the device.</p>
 <p>Recording is under your control: it starts only after you tap "Start
 recording" and accept the background-recording notice, and you can stop it at
 any time from the app's home screen. While it runs, Android shows the app's
@@ -92,13 +92,13 @@ ongoing-recording notification and the system location indicator.</p>
       so it is not copied into your Google account backup. Moving to a new
       phone means using the app's export.</li>
   <li><strong>Uninstalling the app permanently deletes your entire
-      timeline.</strong> There is no copy anywhere else.</li>
+      timeline stored in the app.</strong> Files you exported are not deleted.</li>
 </ul>
 
 <h2>Importing a Google Maps Timeline export</h2>
 <p>If you choose to import a Google Maps Timeline export, the app reads that
-file on your phone and stores the result only on your phone. Nothing from the
-file is uploaded or sent to us or to anyone else.</p>
+file on your phone and stores the result on your phone. The app does not
+upload the file or its contents as part of importing.</p>
 <ul>
   <li>The app reads the Timeline export from Android's Timeline settings
       (<code>Timeline.json</code>) and older Google Takeout location history:
@@ -129,10 +129,10 @@ file is uploaded or sent to us or to anyone else.</p>
       app's Settings, under Imported history. Deleting one import also
       deletes the place names it brought in. Deleting is always free.
       Uninstalling the app also deletes it permanently.</li>
-  <li>The app's diagnostic log records at most one line per import, with
-      counts only: how many places and journeys were read or skipped, how
-      long it took and whether it finished. It never records the file name,
-      place names, addresses, coordinates or dates.</li>
+  <li>Each import diagnostic entry contains the logging timestamp, elapsed
+      time since boot, a local batch ID, format, counts, duration and result,
+      but no file name, place names, addresses, coordinates or dates from
+      the imported timeline.</li>
 </ul>
 <p>The app is not affiliated with Google.</p>
 <p>Guide: <a href="guides/google-maps-timeline-export-android.html">How to export your Google Maps Timeline on Android</a></p>
@@ -145,12 +145,16 @@ history in readable form — the app reminds you of this before every export, an
 how you store or share that file is up to you.</p>
 
 <h2>Network use</h2>
-<p>The app makes no network requests of its own. Its manifest carries the
-network permission only because the Google Play billing component described
-below requires it. Google Play In-App Review added no permission: the app
-asks the Google Play Store app on your phone to show its rating card, and if
-you post a rating or review, Google Play sends it, not the app. Your location
-data is never sent over any network connection.</p>
+<p>Our own app code makes no direct network requests. Google Play Billing and
+its bundled dependencies can communicate with Google, and the Billing
+dependency chain adds the INTERNET permission. Google's handling of data is
+subject to <a href="https://policies.google.com/privacy">Google's Privacy
+Policy</a>. Google Play In-App Review added no permission: the app asks the
+Google Play Store app on your phone to show its rating card, and if you post
+a rating or review, Google Play sends it, not the app. The app does not
+automatically upload your timeline or include it in billing or review
+requests; files you choose to export may be transferred by your selected
+storage or sharing service.</p>
 
 <h2>Purchases</h2>
 <p>The one-time Timeline Pro unlock is sold through Google Play. Google
@@ -166,37 +170,44 @@ any kind from the app. Your device's own system-level reporting to Google
 and governed by your device settings and Google's privacy policy.</p>
 
 <h2>Third-party services</h2>
-<p>The app includes exactly two third-party services, both from Google
-Play:</p>
+<p>The app uses the following Google services:</p>
 <ul>
   <li><strong>Google Play Billing</strong> — handles the one-time Pro
-      purchase. Data involved in the purchase is processed by Google Play
+      purchase and ownership checks. Data is processed by Google Play
       under <a href="https://policies.google.com/privacy">Google's Privacy
       Policy</a>.</li>
-  <li><strong>Google Play In-App Review</strong> — after you have used the
-      app on a few different days and the install is at least a week old, the
-      app may ask Google Play to show its rating card when you leave a
-      successful import result or open a past day with a recorded stop or
-      journey, at most once every 60 days; Google Play decides whether the
-      card actually appears. The card is shown by Google Play, and any rating
-      or review you post in it goes to Google Play under your Google account
-      and is handled under
+  <li><strong>Google Play In-App Review</strong> — offers optional ratings.
+      Automatic prompts are enabled only in release builds, after at least
+      four counted opens across at least three distinct days and seven days
+      since installation; returning after at least 30 minutes in the
+      background counts as a new open. A prompt may follow the first
+      departure from an import result that added a place or journey, or
+      opening an unlocked past day containing a recorded stop or journey,
+      subject to screen and timing checks. The app normally waits at least
+      60 days after a review flow that may have displayed the card. Google
+      Play decides whether the card actually appears. Any rating or review
+      you submit goes to Google Play under your Google account and is handled
+      under <a href="https://policies.google.com/privacy">Google's Privacy
+      Policy</a>. Reviews for a published release are public on Google Play;
+      feedback for a closed test is shared privately with the developer.
+      The app sends nothing about your timeline with the request and is never
+      told whether you rated it, what rating you gave or what you wrote.
+      "Rate this app" in Settings simply opens the app's Google Play page.
+      After a review flow completes successfully or reaches the app's
+      90-second wait limit, the app attempts to write one local diagnostic
+      entry containing the logging timestamp, elapsed time since boot, the
+      event name "review_asked", and the counted opens and distinct days.
+      That log stays on your phone unless you save it to a file yourself
+      from Settings.</li>
+  <li><strong>Google Play services</strong> — provides location and activity
+      recognition, subject to
       <a href="https://policies.google.com/privacy">Google's Privacy
-      Policy</a>. The app sends nothing about your timeline with the request
-      and is never told whether you rated it, what rating you gave or what
-      you wrote. "Rate this app" in Settings simply opens the app's Google
-      Play page. Each time Google Play takes the request to show the card, the
-      app's on-device diagnostic log records one line with the time and two
-      counts (how many times and on how many days the app has been opened),
-      and nothing else. That log stays on your phone unless you
-      save it to a file yourself from Settings.</li>
+      Policy</a>.</li>
 </ul>
-<p>There are no other SDKs, no analytics services, and no data-sharing
-partners.</p>
 
 <h2>Data retention and deletion requests</h2>
 <p>We do not hold any of your data ourselves, so there is nothing for us to
-delete on request — your timeline exists only on your phone, where you can
+delete on request — the app stores your timeline on your phone, where you can
 delete it by uninstalling the app (imported history can also be deleted in
 the app's Settings). Purchase records are held by Google Play
 under Google's retention policies.</p>
