@@ -173,12 +173,14 @@ has been installed for at least three days, and only when the app was installed 
 Google Play decides whether the card actually appears. The card is shown by Google Play, and any
 rating or review you post in it goes to Google Play under your Google account and is handled under
 the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. The app is never told
-whether you rated it, what rating you gave or what you wrote. <em>Rate Dewluma</em> in Settings
+whether you rated it, what rating you gave or what you wrote. As with any Google Play review, a
+review you post is shown publicly on Google Play, and the developer can read it and reply there.
+<em>Rate Dewluma</em> in Settings
 simply opens the app's Google Play page. The app records a usage event when the card is requested
 (<code>review_asked</code>, sent with the next day's batch rather than at that moment) and when
 <em>Rate Dewluma</em> is tapped (<code>rate_app_tapped</code>), with no other details. To keep to
-these limits, the app stores on your device only how many completed days it has counted and when it
-last asked; this record is not backed up, and <em>Delete all data</em> does not reset it, so a reset
+these limits, the app stores on your device only how many completed days it has counted, the date
+of the last one it counted, and when it last asked; this record is not backed up, and <em>Delete all data</em> does not reset it, so a reset
 does not bring the card back sooner.</p>
 
 <h2 id="delete">Deleting your data</h2>
@@ -216,7 +218,8 @@ Families programme. It does not knowingly collect personal information from chil
 <h2>Who the data is shared with</h2>
 <p>We do not sell data and do not share it with anyone for their own use. Google processes the
 Analytics and Crashlytics data, and Google Play the purchases, on our behalf as described above;
-any rating or review you post in Google Play's rating card goes to Google Play, not to us;
+a rating or review you post in Google Play's rating card goes to Google Play, which handles it under
+its own terms and shows a review publicly, as described under <a href="#rating">Rating the app</a>;
 Cloudflare may deliver the story files.</p>
 
 <h2>Changes and contact</h2>
