@@ -185,9 +185,10 @@ Play:</p>
       Policy</a>. The app sends nothing about your timeline with the request
       and is never told whether you rated it, what rating you gave or what
       you wrote. "Rate this app" in Settings simply opens the app's Google
-      Play page. The app's on-device diagnostic log records one line when the
-      card is requested, with counts only (how many times and on how many
-      days the app has been opened). That log stays on your phone unless you
+      Play page. Each time Google Play takes the request to show the card, the
+      app's on-device diagnostic log records one line with the time and two
+      counts (how many times and on how many days the app has been opened),
+      and nothing else. That log stays on your phone unless you
       save it to a file yourself from Settings.</li>
 </ul>
 <p>There are no other SDKs, no analytics services, and no data-sharing
