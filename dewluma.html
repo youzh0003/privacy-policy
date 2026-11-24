@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Dewluma: Glow Pet &amp; Habits</title>
 <h1>Privacy Policy — Dewluma: Glow Pet &amp; Habits (being renamed Dewluma: Habit Tracker Pet)</h1>
-<p>Effective date: November 23, 2026</p>
+<p>Effective date: November 24, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -59,8 +59,8 @@ does not delete. The app is provided by yzyy, an individual developer based in S
 </ul>
 
 <h2 id="yours">What you put in the app</h2>
-<p>Your habits, check-ins, mood ratings and notes, your pet's name and progress, postcards and
-decorations are stored on your device. They are not sent to the developer, and the developer has
+<p>Your habits, check-ins, mood ratings and notes, your pet's name and progress, postcards,
+decorations and acorns are stored on your device. They are not sent to the developer, and the developer has
 no server that receives them. This also covers the name you may give yourself, the answers you
 pick on postcards and journeys, and your reminder time. The only exception is the fixed values
 listed under <a href="#analytics">Analytics</a>, for example your pet's stage, the personality trait of a
@@ -111,7 +111,7 @@ log exports or web analytics for the content host. Cloudflare's own handling is 
 Habit and check-in completions are sent only as a count for each day, the next day you open the
 app, not when you complete them (apart from a one-time setup step during onboarding). Like any app
 analytics, they do show when the app is in use.</p>
-<p>The app sends only these 18 events. Each one carries at most the fixed values listed; there is
+<p>The app sends only these 20 events. Each one carries at most the fixed values listed; there is
 no free text:</p>
 <ul>
   <li><code>app_open</code> (no values)</li>
@@ -141,6 +141,10 @@ no free text:</p>
   <li><code>review_asked</code> (no values; sent with the next day's batch, see
       <a href="#rating">Rating the app</a>)</li>
   <li><code>rate_app_tapped</code> (no values)</li>
+  <li><code>acorns_earned</code>, one for each time you earn acorns, sent with the next day's batch:
+      where the acorns came from (day, full_day, stage, carryover); never how many you have or
+      what you buy with them</li>
+  <li><code>acorn_decor_bought</code> (no values; which decoration you chose is not sent)</li>
 </ul>
 <p>The app also sets one user property, <code>install_source</code>, to "play" or "other"
 (whether the app was installed from Google Play).</p>
@@ -185,7 +189,7 @@ does not bring the card back sooner.</p>
 
 <h2 id="delete">Deleting your data</h2>
 <p><em>Delete all data</em> (Settings) removes your pet, habits, history, postcards, settings and
-reminders from this device, including your check-ins, moods, notes, answers and decorations, and the
+reminders from this device, including your check-ins, moods, notes, answers, decorations and acorns, and the
 usage counts waiting to be sent. Your Play purchase record and the shared story files are kept so
 you can restore purchases and keep reading. It also resets the Google Analytics app-instance ID, so new
 usage events start under a new ID. It does not change other identifiers on the device (such as the
