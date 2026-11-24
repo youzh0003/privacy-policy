@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <title>Privacy Policy — Mivello Postcards</title>
 <h1>Privacy Policy — Mivello Postcards</h1>
-<p>Last updated: November 23, 2026</p>
+<p>Last updated: November 24, 2026</p>
 
 <h2>Which app and developer this policy covers</h2>
 <p>This privacy policy applies to the following Android application and its
@@ -96,7 +96,10 @@ parts people actually reach:</p>
 <ul>
   <li>that a trip was prepared, that it departed, that it was notified home, and
       that a notification was opened;</li>
-  <li>that a postcard was opened, kept or saved as a picture;</li>
+  <li>that the pet left home, and that a moment arrived from the road — which
+      one, by its fixed id in the app's own text, and whether it was the first,
+      second or third;</li>
+  <li>that a returned postcard was opened;</li>
   <li>that the album was opened, and that a card in it was reopened;</li>
   <li>that a backup was exported;</li>
   <li>if you buy Mivello Plus, that the purchase was made — this event of ours
@@ -108,8 +111,7 @@ parts people actually reach:</p>
       (<code>REVIEW_ASKED</code>, with no details at all; see
       <a href="#rating">Rating the app</a>);</li>
   <li>how you heard about the app, as one label from a short fixed list: taken
-      from the Google Play link the app was installed from, or from your answer
-      if you answer that optional question;</li>
+      from the Google Play link the app was installed from;</li>
   <li>plus the events Google Analytics collects automatically —
       <code>first_open</code>, <code>session_start</code>,
       <code>user_engagement</code>, <code>screen_view</code>,
@@ -129,9 +131,13 @@ recorded in it.</p>
 <p>If the app stops or misbehaves, a report is sent containing the technical
 details of the failure — the stack trace, the exception type, the moment it
 happened, and the state of the device at the time (model, operating system
-version, memory and storage available). Crash collection is switched off in the
-app package itself and only turned on once your choice has been read, so nothing
-is collected from somebody who switches it off on the first screen.</p>
+version, memory and storage available). Crash reporting is on when you first
+install the app, and it is switched on as soon as the app starts — before you
+reach the switch on the first screen. If you turn it off, there or later in
+Settings, crash reports stop from the next time the app starts; a crash that
+happens before then may still be sent. While it is off, Crashlytics
+may keep crash details on your phone, and they are sent only if you turn crash
+reports back on.</p>
 
 <h3>The identifiers this is tied to</h3>
 <p>The two services above tie what they send to installation identifiers
@@ -200,9 +206,10 @@ is switched on.</p>
 <h2>Advertising</h2>
 <p>The app contains no advertising, no advertising SDK and no ad network. It does
 not collect an advertising ID: the <code>AD_ID</code> permission and both Privacy
-Sandbox advertising permissions are explicitly removed from the app package, and
-the analytics library is configured not to attach an advertising ID to anything
-it sends.</p>
+Sandbox advertising permissions are explicitly removed from the app package.
+Without them, Google Play services gives the app a blank advertising ID (all
+zeros) instead of yours, so nothing the analytics library sends can carry your
+advertising ID.</p>
 
 <h2>Who the data is shared with</h2>
 <p>The only recipients are the Google services the app is built on. The first two
@@ -233,8 +240,9 @@ purposes or for advertising.</strong></p>
 <h2>Keeping it, and getting rid of it</h2>
 <ul>
   <li><strong>Turn it off:</strong> Settings → What is collected has a switch for
-      usage analytics and a switch for crash reports. Turning either off stops
-      that collection from that moment.</li>
+      usage analytics and a switch for crash reports. Turning usage analytics off
+      stops it from that moment; turning crash reports off stops them from the
+      next time the app starts.</li>
   <li><strong>Uninstall:</strong> uninstalling the app stops all collection and
       deletes everything the app stored on your phone, including your album.</li>
   <li><strong>There is no account</strong>, so there is nothing for us to look up
@@ -273,7 +281,7 @@ the app.</p>
 <hr>
 
 <h1 id="zh-hant">隱私權政策 —— Mivello 風寄小箋</h1>
-<p>最後更新：2026 年 11 月 23 日</p>
+<p>最後更新：2026 年 11 月 24 日</p>
 
 <h2>本政策涵蓋哪一個 app、哪一位開發者</h2>
 <p>本隱私權政策適用於以下這一個 Android 應用程式，以及它在 Google Play 上的開發者：</p>
@@ -342,7 +350,9 @@ the app.</p>
 <p>一組固定、封閉的事件，讓我們知道哪些部分真的有人用到：</p>
 <ul>
   <li>行李收拾好了、出發了、回家時發出了通知、通知被點開了；</li>
-  <li>明信片被打開、被收進相簿、被存成圖片；</li>
+  <li>小獸離開家門、路上寄回了一則片刻 —— 記下是哪一則（用 app 內建文字裡的固定編號），
+      以及它是第一、第二還是第三則；</li>
+  <li>寄回來的明信片被打開；</li>
   <li>相簿被打開、相簿裡的某張卡被重新打開；</li>
   <li>備份被存出；</li>
   <li>如果你購買 Mivello Plus，記下「有一筆購買」—— 我們這個事件本身不帶任何細節：
@@ -353,7 +363,7 @@ the app.</p>
   <li>本 app 向 Google Play 請求顯示評分卡（<code>REVIEW_ASKED</code>，不帶任何細節；
       見<a href="#zh-hant-rating">為本 app 評分</a>）；</li>
   <li>你是從哪裡聽說這個 app 的，記成一份簡短固定清單裡的一個標籤：取自安裝時使用的
-      Google Play 連結，或取自你對那個選填問題的回答；</li>
+      Google Play 連結；</li>
   <li>以及 Google Analytics 自動蒐集的事件 —— <code>first_open</code>、
       <code>session_start</code>、<code>user_engagement</code>、
       <code>screen_view</code>、<code>app_update</code>、<code>os_update</code>、
@@ -369,8 +379,10 @@ the app.</p>
 <h3>當機報告（Firebase Crashlytics）</h3>
 <p>如果 app 當掉或出錯，會送出一份報告，內容是這次失敗的技術細節 —— 堆疊追蹤、
 例外類型、發生的時刻，以及當下的裝置狀態（型號、作業系統版本、可用記憶體與儲存空間）。
-當機蒐集在安裝檔裡就是關著的，要等讀到你的選擇之後才會打開，
-所以在第一個畫面就把它關掉的人，不會有任何東西被蒐集。</p>
+當機回報在剛安裝時就是開啟的，而且 app 一啟動就會打開 —— 早於你在第一個畫面看到那個開關。
+如果你在那裡、或之後在設定裡把它關掉，從下次開啟 app 起就不再送出當機報告；
+在那之前發生的當機仍可能送出。關閉期間，Crashlytics 可能會把當機資訊
+先存在你的手機上，只有在你重新打開當機回報時才會送出。</p>
 
 <h3>這些資料綁在什麼識別碼上</h3>
 <p>上面兩個服務把送出的內容綁在 Google 自己的軟體產生的安裝識別碼上：
@@ -422,8 +434,9 @@ Google 帳號送到 Google Play，並適用
 
 <h2>廣告</h2>
 <p>本 app 沒有廣告、沒有廣告 SDK、也沒有任何廣告聯播網。它不蒐集廣告 ID：
-<code>AD_ID</code> 權限與兩個 Privacy Sandbox 廣告權限都已明確從安裝檔中移除，
-分析程式庫也設定成不在送出的任何內容上附加廣告 ID。</p>
+<code>AD_ID</code> 權限與兩個 Privacy Sandbox 廣告權限都已明確從安裝檔中移除。
+少了這些權限，Google Play 服務給本 app 的只是一個空白的廣告 ID（全部是零），
+而不是你的廣告 ID，所以分析程式庫送出的內容不會帶有你的廣告 ID。</p>
 
 <h2>資料會交給誰</h2>
 <p>唯一的接收方是本 app 所依賴的 Google 服務。前兩項代我們處理上述資料；
@@ -448,7 +461,7 @@ Google 帳號送到 Google Play，並適用
 <h2>保留與刪除</h2>
 <ul>
   <li><strong>關掉它：</strong>「設定 → 會蒐集什麼」裡有一個使用分析開關和一個
-      當機報告開關。任一個關掉，該項蒐集就從那一刻停止。</li>
+      當機報告開關。關掉使用分析，從那一刻起停止；關掉當機報告，從下次開啟 app 起停止。</li>
   <li><strong>解除安裝：</strong>解除安裝會停止全部蒐集，並刪除 app 存在你手機上的
       所有東西，包含你的相簿。</li>
   <li><strong>沒有帳號</strong>，所以我們沒有東西可查，你也沒有地方可登入。
